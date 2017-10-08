@@ -1,0 +1,19 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "google"
+  ],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "no-var": 1, // Disable error when use var instead of let or const and show a warning instead
+    "semi": 2,
+    // enable additional rules
+    "indent": ["error", 2],
+    // disable rules from base configurations
+    "no-console": "off",
+    "quotes": ["error", "double"],
+  }
+}
