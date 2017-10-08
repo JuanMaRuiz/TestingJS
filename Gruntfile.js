@@ -6,14 +6,14 @@ module.exports = function(grunt) {
   grunt.initConfig({
     watch: {
       scripts: {
-        files: "dev/**/*.js",
+        files: "web-layer/**/*.js",
         tasks: ["eslint"],
         options: {
           livereload: true,
         },
       },
       html: {
-        files: "dev/**/*.html",
+        files: "web-layer/**/*.html",
         options: {
           livereload: true,
         },
@@ -24,19 +24,19 @@ module.exports = function(grunt) {
         // format: 'node_modules/eslint-tap',
         configFile: ".eslintrc",
       },
-      target: ["dev/**/*.js"],
+      target: ["web-layer/scripts/*.js"],
     },
     browserSync: {
       dev: {
         bsFiles: {
           src: [
-            "dev/scripts/*.js",
-            "dev/*.html",
+            "web-layer/scripts/*.js",
+            "web-layer/*.html",
           ],
         },
         options: {
           watchTask: true,
-          server: "./dev",
+          server: "./web-layer",
         },
       },
     },
