@@ -19,11 +19,11 @@
     "require-jsdoc": ["error", {
       "require": {
         "FunctionDeclaration": true,
-        "MethodDefinition": false,
+        "MethodDefinition": true,
         "ClassDeclaration": false,
         "ArrowFunctionExpression": false
       }
     }],
-    // "valid-jsdoc": "error"
+    "valid-jsdoc": "error"
   }
 }

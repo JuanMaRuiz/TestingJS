@@ -7,7 +7,7 @@
     "url": "https://github.com/JuanMaRuiz/testingjs"
   },
   "scripts": {
-    "test": "./node_modules/.bin/karma start",
+    "test": "echo TBC",
     "jsFix": "./node_modules/.bin/eslint . --fix",
     "jslint": "./node_modules/.bin/eslint ."
   },
