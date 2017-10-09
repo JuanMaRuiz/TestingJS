@@ -15,13 +15,35 @@
   <div class="container">
     <div class="row">
       <header class="column">
-        <h1>Hooray!!! It works!!</h1>
+        <h1>Awesome developers</h1>
       </header> <!-- /. End of colunm -> container div for h1 -->
     </div> <!-- /. End of row which contains h1 -->
-    <!-- This list should show the selected configuration by the user -->
-    <header class="column">
-      <h3>Todo List</h3>
-    </header>
+    <div class="row">
+      <header class="column">
+        <h3>Add a new Awesome developer</h3>
+      </header>
+    </div>
+
+    <form class="row">
+      <fieldset class="column column-25">
+        <label for="nameField">Name</label>
+        <input type="text" placeholder="John Doe" id="nameField">
+      </fieldset>
+      <fieldset class="column column-25">
+        <label for="webField">Web</label>
+        <input type="text" placeholder="https://johndoe.com/" id="webField">
+      </fieldset>
+      <fieldset class="column column-25">
+        <label for="twitterField">Twitter</label>
+        <input type="text" placeholder="https://twitter.com/johndoe" id="twitterField">
+      </fieldset>
+      <fieldset class="column column-25">
+        <label for="githubField">Github</label>
+        <input type="text" placeholder="https://github.com/johndoe" id="githubField">
+        <input class="button-primary float-right" type="submit" value="Send">
+      </fieldset>
+    </form>
+
     <table>
       <thead>
       <tr>
@@ -33,7 +55,7 @@
       </thead>
       <tbody>
       <tr>
-        <td>Stephen Curry</td>
+        <td>Addy Osmani</td>
         <td><a href="http://addyosmani.com/">http://addyosmani.com/</a></td>
         <td><a href="http://twitter.com/addyosmani">http://twitter.com/addyosmani</a></td>
         <td><a href="http://github.com/addyosmani">http://github.com/addyosmani</a></td>
@@ -43,6 +65,18 @@
         <td><a href="http://paulirish.com/">http://paulirish.com/</a></td>
         <td><a href="http://twitter.com/paul_irish">http://twitter.com/paul_irish</a></td>
         <td><a href="https://github.com/paulirish">https://github.com/paulirish</a></td>
+      </tr>
+      <tr>
+        <td>Matt Gaunt</td>
+        <td><a href="http://paulirish.com/">https://gauntface.com/</a></td>
+        <td><a href="http://twitter.com/paul_irish">https://twitter.com/gauntface</a></td>
+        <td><a href="https://github.com/paulirish">https://github.com/gauntface</a></td>
+      </tr>
+      <tr>
+        <td>Stoyan Stefanov</td>
+        <td><a href="http://paulirish.com/">http://www.phpied.com</a></td>
+        <td><a href="http://twitter.com/paul_irish">https://twitter.com/stoyanstefanov</a></td>
+        <td><a href="https://github.com/paulirish">https://github.com/stoyan</a></td>
       </tr>
       </tbody>
     </table>
