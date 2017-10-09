@@ -7,11 +7,7 @@
   <!-- Google Fonts -->
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
 
-  <!-- CSS Reset -->
-  <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
-
-  <!-- Milligram CSS minified -->
-  <link rel="stylesheet" href="//cdn.rawgit.com/milligram/milligram/master/dist/milligram.min.css">
+  <link rel="stylesheet" href="/lib/css/milligram.min.css">
 
   <!-- You should properly set the path from the main file. -->
 </head>
@@ -20,16 +16,36 @@
     <div class="row">
       <header class="column">
         <h1>Hooray!!! It works!!</h1>
-        <h3>Now is your time to build something impresive</h3>
       </header> <!-- /. End of colunm -> container div for h1 -->
     </div> <!-- /. End of row which contains h1 -->
     <!-- This list should show the selected configuration by the user -->
-    <p>Here you have your selected configuration</p>
-    <ul>
-        <li><b>Application name</b>: TestingJS</li>
-        <li><b>Package name</b> used by <code>package.json</code>: testing-js</li>
-        <li><b>Dependency manager</b>: npm</li>
-    </ul>
+    <header class="column">
+      <h3>Todo List</h3>
+    </header>
+    <table>
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>Web</th>
+        <th>Twitter</th>
+        <th>Github account</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>Stephen Curry</td>
+        <td><a href="http://addyosmani.com/">http://addyosmani.com/</a></td>
+        <td><a href="http://twitter.com/addyosmani">http://twitter.com/addyosmani</a></td>
+        <td><a href="http://github.com/addyosmani">http://github.com/addyosmani</a></td>
+      </tr>
+      <tr>
+        <td>Paul Irish</td>
+        <td><a href="http://paulirish.com/">http://paulirish.com/</a></td>
+        <td><a href="http://twitter.com/paul_irish">http://twitter.com/paul_irish</a></td>
+        <td><a href="https://github.com/paulirish">https://github.com/paulirish</a></td>
+      </tr>
+      </tbody>
+    </table>
   </div> <!-- /. End of main container -->
 
   <script src="scripts/app.js"></script>

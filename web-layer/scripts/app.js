@@ -1,13 +1,13 @@
 (function() {
-  "use strict";
+  'use strict';
 
   var BazingaApp = BazingaApp || {};
 
   BazingaApp.sayHello = function() {
-    return "This is awesome!!";
+    return 'This is awesome!!';
   };
 
-  if ( typeof(window.BazingaApp) === "undefined") {
+  if ( typeof(window.BazingaApp) === 'undefined') {
     window.BazingaApp = BazingaApp;
   }
 
