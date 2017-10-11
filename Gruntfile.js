@@ -23,7 +23,7 @@ module.exports = function(grunt) {
       styles: {
         expand: true,
         flatten: true,
-        src: ['node_modules/milligram/dist/milligram.min.css'],
+        src: ['node_modules/bulma/css/bulma.css'],
         dest: 'web-layer/lib/css/'
       }
     },

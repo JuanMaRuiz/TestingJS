@@ -7,46 +7,61 @@
   <!-- Google Fonts -->
   <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
 
-  <link rel="stylesheet" href="/lib/css/milligram.min.css">
+  <link rel="stylesheet" href="/lib/css/bulma.css">
 
   <!-- You should properly set the path from the main file. -->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
-      <header class="column">
-        <h1>Hooray!!! It works!!</h1>
+  <div class="section">
+    <div class="container">
+      <header>
+        <h1 class="title">Hooray!!! It works!!</h1>
       </header> <!-- /. End of colunm -> container div for h1 -->
-    </div> <!-- /. End of row which contains h1 -->
-    <!-- This list should show the selected configuration by the user -->
-    <header class="column">
-      <h3>Todo List</h3>
-    </header>
-    <table>
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Web</th>
-        <th>Twitter</th>
-        <th>Github account</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td>Stephen Curry</td>
-        <td><a href="http://addyosmani.com/">http://addyosmani.com/</a></td>
-        <td><a href="http://twitter.com/addyosmani">http://twitter.com/addyosmani</a></td>
-        <td><a href="http://github.com/addyosmani">http://github.com/addyosmani</a></td>
-      </tr>
-      <tr>
-        <td>Paul Irish</td>
-        <td><a href="http://paulirish.com/">http://paulirish.com/</a></td>
-        <td><a href="http://twitter.com/paul_irish">http://twitter.com/paul_irish</a></td>
-        <td><a href="https://github.com/paulirish">https://github.com/paulirish</a></td>
-      </tr>
-      </tbody>
-    </table>
-  </div> <!-- /. End of main container -->
+
+      <!-- This list should show the selected configuration by the user -->
+      <div class="columns">
+      <div class="column">
+        <div class="box">
+          <article class="media">
+            <p>Addy Osmani</p>
+            </ul>
+          </article>
+        </div>
+        <div class="box">
+          <article class="media">
+            <p>Paul Irish</p>
+            </ul>
+          </article>
+        </div>
+        <div class="box">
+          <article class="media">
+            <p>Paul Irish</p>
+            </ul>
+          </article>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="" alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">Addy Osmani</p>
+                <p><a href="http://addyosmani.com/">http://addyosmani.com/</a></p>
+                <p><a href="http://twitter.com/addyosmani">http://twitter.com/addyosmani</a></p>
+                <p><a href="http://github.com/addyosmani">http://github.com/addyosmani</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div> <!-- /. End of .container -->
+  </div> <!-- /. End of main container .section -->
 
   <script src="scripts/app.js"></script>
 </body>
