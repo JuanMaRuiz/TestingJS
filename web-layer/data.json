@@ -1,0 +1,25 @@
+[
+  {
+    "_id": "5dde1218d583775d9c86aea3",
+    "name": "Addy Osmani",
+    "web": "http://addyosmani.com/",
+    "twitter": "http://twitter.com/addyosmani",
+    "github": "http://github.com/addyosmani",
+  },
+  {
+    "_id": "53de1218d583775d9c86aea3",
+    "name": "Paul Irish",
+    "web": "http://paulirish.com/",
+    "twitter": "http://twitter.com/paul_irish",
+    "github": "https://github.com/paulirish",
+  },
+  {
+    "_id": "59fe1218d583775d9c86aea3",
+    "name": "Stoyan Stefanov",
+    "web": "www.phpied.com/",
+    "twitter": "https://twitter.com/stoyanstefanov",
+    "github": "https://github.com/stoyan",
+  },
+]
+
+
