@@ -1,6 +1,6 @@
 {
   "name": "testing-js",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "This is your project you should write your own description",
   "repository": {
     "type": "git",
@@ -12,19 +12,29 @@
     "jslint": "./node_modules/.bin/eslint ."
   },
   "devDependencies": {
+<<<<<<< HEAD
     "bulma": "^0.6.0",
     "chai": "^4.1.1",
+=======
+    "chai": "^4.1.2",
+>>>>>>> e0235b6ff08d414173fe785085ce20bcd24af86e
     "eslint-config-google": "^0.9.1",
     "grunt": "^1.0.1",
     "grunt-browser-sync": "^2.2.0",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
+<<<<<<< HEAD
     "grunt-eslint": "^20.0.0",
     "jasmine-core": "^2.7.0",
     "jit-grunt": "^0.10.0"
   },
   "dependencies": {
     "jsdoc": "^3.5.5"
+=======
+    "grunt-eslint": "^20.1.0",
+    "jit-grunt": "^0.10.0",
+    "milligram": "^1.3.0"
+>>>>>>> e0235b6ff08d414173fe785085ce20bcd24af86e
   }
 }

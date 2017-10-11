@@ -7,13 +7,13 @@
     "browser": true
   },
   "rules": {
-    "no-var": 0, // Use var instead of let or const. 0 -> No warning no error, 1 -> warning, 2 -> error.
+    "no-var": 0, // Use var instead of let or const. 0 -> No warning, no error; 1 -> warning, 2 -> error.
     "semi": 2,
     // enable additional rules
     "indent": ["error", 2],
     // disable rules from base configurations
     "no-console": "off",
-    "max-len": ["error", 180],
+    "max-len": ["error", 150],
     // Code documentation
     "require-jsdoc": ["error", {
       "require": {
