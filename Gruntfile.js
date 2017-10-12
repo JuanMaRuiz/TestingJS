@@ -9,15 +9,15 @@ module.exports = function(grunt) {
         files: 'web-layer/**/*.js',
         tasks: ['eslint'],
         options: {
-          livereload: true,
-        },
+          livereload: true
+        }
       },
       html: {
         files: 'web-layer/**/*.html',
         options: {
-          livereload: true,
-        },
-      },
+          livereload: true
+        }
+      }
     },
     copy: {
       styles: {
@@ -31,24 +31,24 @@ module.exports = function(grunt) {
       options: {
         // format: 'node_modules/eslint-tap',
         configFile: '.eslintrc',
-        fix: true // By default eslint task will try to fix all lint errors if not will fail
+        fix: true // By default eslint task will try to fix all lint errors if not it will fail
       },
-      target: ['web-layer/scripts/*.js'],
+      target: ['web-layer/scripts/*.js']
     },
     browserSync: {
       dev: {
         bsFiles: {
           src: [
             'web-layer/scripts/*.js',
-            'web-layer/*.html',
-          ],
+            'web-layer/*.html'
+          ]
         },
         options: {
           watchTask: true,
-          server: './web-layer',
-        },
-      },
-    },
+          server: './web-layer'
+        }
+      }
+    }
   });
 
   grunt.registerTask('default', ['eslint', 'copy', 'browserSync', 'watch']);
