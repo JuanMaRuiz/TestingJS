@@ -5,7 +5,7 @@
     "bio": "Engineering manager at Google working on Chrome",
     "web": "http://addyosmani.com/",
     "twitter": "http://twitter.com/addyosmani",
-    "github": "http://github.com/addyosmani",
+    "github": "http://github.com/addyosmani"
   },
   {
     "_id": "53de1218d583775d9c86aea3",
@@ -13,15 +13,15 @@
     "bio": "Hello, I’m a front-end developer,and work on the Google Chrome team focused on Developer Tooling.",
     "web": "http://paulirish.com/",
     "twitter": "http://twitter.com/paul_irish",
-    "github": "https://github.com/paulirish",
+    "github": "https://github.com/paulirish"
   },
   {
     "_id": "59fe1218d583775d9c86aea3",
     "name": "Stoyan Stefanov",
-    "bio": "Stoyan Stefanov is a Facebook engineer, ex-Yahoo, architect of the YSlow 2.0 performance tool and creator of the smush.it image optimization tool!"
+    "bio": "Stoyan Stefanov is a Facebook engineer, ex-Yahoo, architect of the YSlow 2.0 performance tool and creator of the smush.it image optimization tool!",
     "web": "www.phpied.com/",
     "twitter": "https://twitter.com/stoyanstefanov",
-    "github": "https://github.com/stoyan",
+    "github": "https://github.com/stoyan"
   },
   {
     "_id": "59fe1218d583775d9c86aea4",
