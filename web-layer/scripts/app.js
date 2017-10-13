@@ -18,8 +18,8 @@
 
   /**
    * @description VanillaJS implementation for Ajax request
-   * @param {String} url         Url for the ajax request
-   * @param {Function} callback  Callback function
+   * @param {String} url - Url for the ajax request
+   * @param {Function} callback - Callback function
    */
   function ajax(url, callback) {
     var response,
