@@ -28,8 +28,7 @@
     if ( !httpRequest ) {
       throw new Error('There was an error');
     }
-
-    // TBD
+    
     httpRequest.onreadystatechange = function() {
       try {
         if (httpRequest.readyState == 4 && httpRequest.status == 200) {
