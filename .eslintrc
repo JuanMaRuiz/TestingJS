@@ -6,6 +6,9 @@
   "env": {
     "browser": true
   },
+  "globals": {
+    "jqLite": true
+  },
   "rules": {
     "no-var": 0, // Use var instead of let or const. 0 -> No warning, no error; 1 -> warning, 2 -> error.
     "one-var": ["error", {
