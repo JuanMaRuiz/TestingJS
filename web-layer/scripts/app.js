@@ -11,7 +11,7 @@
    * @description Retrieve all the info about developers
    */
   BazingaApp.getDevsInfo = function() {
-    ajax('http://localhost:3000/data.json', function(data) {
+    ajax('data.json', function(data) {
       console.log(data);
     });
   };
