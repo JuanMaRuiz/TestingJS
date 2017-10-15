@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo TBC",
     "jsFix": "./node_modules/.bin/eslint . --fix",
-    "jslint": "./node_modules/.bin/eslint ."
+    "jslint": "./node_modules/.bin/eslint .",
+    "generateDoc": "./node_modules/.bin/jsdoc -c jsdoc-config.js"
   },
   "devDependencies": {
     "bulma": "^0.6.0",

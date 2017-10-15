@@ -18,7 +18,7 @@
 
   /**
    * VanillaJS implementation for Ajax request
-   * @param {String} url - Url for the ajax request
+   * @param {String} url        - Url for the ajax request
    * @param {Function} callback - Callback function to execute when ajax response is received
    */
   jqLite.ajax = function(url, callback) {
@@ -33,7 +33,7 @@
     httpRequest.send();
 
     /**
-     * @description Checks if the response was received and OK then send the response of the url provided to the callback function
+     * Checks if the response was received and OK. Then send the response of the url provided to the callback function
      */
     function makeRequest() {
       try {
