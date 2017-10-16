@@ -1,6 +1,6 @@
 /**
  * jqLite v0.1.0
- * This jqLite provides a simple API like jQuery to manipulate the DOM and add some basics useful methods like ajax request.
+ * @description This jqLite provides a simple API like jQuery to manipulate the DOM and add some basics useful methods like ajax request.
  * Is build in vanillaJS and the browser supports is the main objective.
  * @param {Object} window    - Window object is passed as parameter to avoid override it
  * @param {Object} document  - Document object is passed as parameter to avoid override it
@@ -17,7 +17,7 @@
   };
 
   /**
-   * VanillaJS implementation for Ajax request
+   * @description VanillaJS implementation for Ajax request
    * @param {String} url        - Url for the ajax request
    * @param {Function} callback - Callback function to execute when ajax response is received
    */
@@ -52,9 +52,21 @@
    * @param {String} selector CSS Selector (id or class)
    * @return {Element} DOM Element to be retrieved
    */
-  jqLite.qs = function(scope, selector) {
+  jqLite.qs = function(selector, scope) {
     var context = scope || document;
     return context.querySelector(selector);
+  };
+
+  /**
+   * Wrapper for addEventListener
+   * @param {Element} target
+   * @param {String} type - A string representing the Event Type
+   * @param {Function} callback - Function to execute when receives the notification
+   * @param {Object} options - Object that specifies characteristics about the event listener
+   */
+  jqLite.$on = function(target, type, callback, options) {
+    var opt = options || false;
+    target.addEventListener(type, callback, opt);
   };
 
   if ( !scope.jqLite ) {

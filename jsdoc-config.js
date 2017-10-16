@@ -1,12 +1,8 @@
 'use strict';
 
 module.exports = {
-  plugins: [
-    "plugins/markdown",
-    "plugins/summarize"
-  ],
-
-  recurseDepth: 10,
+  plugins: [],
+  recurseDepth: 20,
   source: {
     include: [
       'web-layer/scripts'
@@ -18,9 +14,7 @@ module.exports = {
     ],
     includePattern: ".+\\.js?$",
     excludePattern: "(^|\\/|\\\\)_"
-
   },
-  sourceType: "module",
   tags: {
     allowUnknownTags: true,
     dictionaries: ["jsdoc"]
