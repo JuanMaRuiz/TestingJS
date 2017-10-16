@@ -1,2 +1,4 @@
 test/**/*.js
 Gruntfile.js
+jsdoc-config.js
+package.json

@@ -46,6 +46,17 @@
     }
   };
 
+  /**
+   * Get Element by css selector (class or id). querySelector is widely supported from IE9.
+   * @param {Element} scope - If no context is provided 'document' will used
+   * @param {String} selector CSS Selector (id or class)
+   * @return {Element} DOM Element to be retrieved
+   */
+  jqLite.qs = function(scope, selector) {
+    var context = scope || document;
+    return context.querySelector(selector);
+  };
+
   if ( !scope.jqLite ) {
     scope.jqLite = jqLite;
   }

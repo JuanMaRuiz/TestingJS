@@ -10,7 +10,7 @@
     "test": "echo TBC",
     "jsFix": "./node_modules/.bin/eslint . --fix",
     "jslint": "./node_modules/.bin/eslint .",
-    "generateDoc": "./node_modules/.bin/jsdoc -c jsdoc-config.js"
+    "generateDoc": "./node_modules/.bin/jsdoc -c jsdoc-config.js README.md"
   },
   "devDependencies": {
     "bulma": "^0.6.0",

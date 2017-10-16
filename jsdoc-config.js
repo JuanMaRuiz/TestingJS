@@ -1,7 +1,11 @@
 'use strict';
 
 module.exports = {
-  plugins: [],
+  plugins: [
+    "plugins/markdown",
+    "plugins/summarize"
+  ],
+
   recurseDepth: 10,
   source: {
     include: [
@@ -16,18 +20,18 @@ module.exports = {
     excludePattern: "(^|\\/|\\\\)_"
 
   },
-  sourceType: "script",
+  sourceType: "module",
   tags: {
     allowUnknownTags: true,
-    dictionaries: ["jsdoc","closure"]
+    dictionaries: ["jsdoc"]
   },
   templates: {
     cleverLinks: false,
     monospaceLinks: false
   },
   opts: {
-    encoing: "utf8",                 // same as -e utf8
+    encoding: "utf8",                 // same as -e utf8
     destination: "./documentation/", // same as -d ./out/
-    recurse: true                    // same as -r
+    recurse: true,                   // same as -r
   }
 };
