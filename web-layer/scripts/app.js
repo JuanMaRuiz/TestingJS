@@ -29,17 +29,18 @@
    */
   BazingaApp.getDevsInfo = function() {
     jqLite.ajax('data.json', function(data) {
-      console.log(data);
+      return data;
     });
   };
 
+  // Example of using $on method. This should be used to change the info panel of developers
   var btn = jqLite.qs('#hello');
   jqLite.$on(btn, 'click', function() {
     alert('Bazinga');
   });
 
   if ( typeof(window.BazingaApp) === 'undefined') {
-    window.BazingaApp = BazingaApp;
+    window.bazingaApp = BazingaApp;
   }
 
   return BazingaApp;
