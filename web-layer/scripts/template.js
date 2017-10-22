@@ -8,9 +8,9 @@
   function Template() {
     this.defaultTemplate
     = '<div class="box">'
-    +  '<article class="media" data-id="{{dev.id}}">'
-    +    '<p>{{dev.name}}</p>'
-    +  '</article>'
+    + '<article class="media" data-id="{{dev.id}}">'
+    + '<p>{{dev.name}}</p>'
+    + '</article>'
     + '</div>';
   }
 
