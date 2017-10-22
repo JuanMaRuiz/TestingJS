@@ -22,15 +22,11 @@
   Template.prototype.addDev = function(data) {
     var template = this.defaultTemplate,
       i = 0,
-      max = data.length,
       view = '';
 
-    for ( ; i < max; i += 1 ) {
-      template = template.replace('{{id}}', data[i]['_id']);
-      template = template.replace('{{dev.name}}', data[i].name);
-
-      view = view + template;
-    }
+    template = template.replace('{{id}}', data['_id']);
+    template = template.replace('{{dev.name}}', data.name);
+    view = view + template;
 
     return view;
   };

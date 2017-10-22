@@ -27,14 +27,29 @@
   /**
    * @description Retrieve all the info about developers
    */
-  BazingaApp.getDevsInfo = function() {
+  var getDevsInfo = function getDevsInfo(callback) {
     jqLite.ajax('data.json', function(data) {
-      return data;
+      callback(data);
     });
   };
 
+
   // Example of using $on method. This should be used to change the info panel of developers
-  var btn = jqLite.qs('#hello');
+  var btn = jqLite.qs('#hello'),
+    list = jqLite.qs('#demo');
+
+
+  // TODO need to be refactored
+  getDevsInfo(renderDevs);
+  function renderDevs(data) {
+    data.forEach(function(dev){
+      var devTemp = new bazingaApp.Template();
+      var li = document.createElement('li');
+      list.appendChild(li);
+      li.innerHTML = devTemp.addDev(dev);
+    });
+  }
+
   jqLite.$on(btn, 'click', function() {
     alert('Bazinga');
   });
