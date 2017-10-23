@@ -1,8 +1,8 @@
-(function(jqLite) {
+(function(scope, jqLite) {
   'use strict';
 
   var BazingaApp = BazingaApp || {},
-    helloBtn = jqLite.qs('#hello');
+    helloBtn = jqLite.qs('#say-hello');
 
   BazingaApp.sayThanks = function() {
     jqLite.thanks();
@@ -47,11 +47,11 @@
     alert('Bazinga!!!');
   });
 
-  jqLite.$on('window', 'load', laodDevs());
+  jqLite.$on(scope, 'load', laodDevs());
 
-  if ( typeof(window.BazingaApp) === 'undefined') {
+  if ( typeof(scope.BazingaApp) === 'undefined') {
     window.bazingaApp = BazingaApp;
   }
 
   return BazingaApp;
-})(jqLite);
+})(window, jqLite);
