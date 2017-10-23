@@ -21,7 +21,6 @@
    */
   Template.prototype.addDev = function(data) {
     var template = this.defaultTemplate,
-      i = 0,
       view = '';
 
     template = template.replace('{{id}}', data['_id']);

@@ -58,6 +58,17 @@
   };
 
   /**
+   * Creates a new DOM element
+   * @param {String} element - html tag which define the element to be created
+   * @param {Element} scope - If no context is provided 'document' will used
+   * @return {Element} DOM Element to be created
+   */
+  jqLite.createElement = function(element, scope) {
+    var context = scope || document;
+    return context.createElement(element);
+  };
+
+  /**
    * Wrapper for addEventListener
    * @param {Element} target
    * @param {String} type - A string representing the Event Type

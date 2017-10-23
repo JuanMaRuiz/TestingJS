@@ -1,58 +1,53 @@
 (function(jqLite) {
   'use strict';
 
-  var BazingaApp = BazingaApp || {};
+  var BazingaApp = BazingaApp || {},
+    helloBtn = jqLite.qs('#hello');
 
   BazingaApp.sayThanks = function() {
     jqLite.thanks();
   };
 
-  // /**
-  //  * Creates a new Developer object;
-  //  * @constructor
-  //  * @param {String} name
-  //  * @param {String} bio
-  //  * @param {String} web
-  //  * @param {String} twitter
-  //  * @param {String} github
-  //  */
-  // function Developer(name, bio, web, twitter, github) {
-  //   this.name = name;
-  //   this.bio = bio;
-  //   this.web = web;
-  //   this.twitter = twitter;
-  //   this.github = github;
-  // }
-
   /**
    * @description Retrieve all the info about developers
+   * @param {Function} callback - Function to be executed when all data have been retrieved form the ajax request
    */
-  var getDevsInfo = function getDevsInfo(callback) {
+  function getDevsInfo(callback) {
     jqLite.ajax('data.json', function(data) {
       callback(data);
     });
-  };
-
-
-  // Example of using $on method. This should be used to change the info panel of developers
-  var btn = jqLite.qs('#hello'),
-    list = jqLite.qs('#demo');
-
-
-  // TODO need to be refactored
-  getDevsInfo(renderDevs);
-  function renderDevs(data) {
-    data.forEach(function(dev){
-      var devTemp = new bazingaApp.Template();
-      var li = document.createElement('li');
-      list.appendChild(li);
-      li.innerHTML = devTemp.addDev(dev);
-    });
   }
 
-  jqLite.$on(btn, 'click', function() {
-    alert('Bazinga');
+  /**
+   * Add all developers to the #devs-list container and render it
+   */
+  function laodDevs() {
+    var list = jqLite.qs('#devs-list');
+    // TODO need to be refactored
+    getDevsInfo(renderDevs);
+
+    /**
+     * TODO needs to be refactored
+     * Render the list of developers
+     * @param {JSON} data - Array of objects from the ajax request
+     */
+    function renderDevs(data) {
+      data.forEach(function(dev) {
+        var devTemp = new BazingaApp.Template(),
+          article = jqLite.createElement('article');
+        list.appendChild(article);
+        article.innerHTML = devTemp.addDev(dev);
+      });
+    }
+  }
+
+  // Example of using $on method. This should be used to change the info panel of developers
+
+  jqLite.$on(helloBtn, 'click', function() {
+    alert('Bazinga!!!');
   });
+
+  jqLite.$on('window', 'load', laodDevs());
 
   if ( typeof(window.BazingaApp) === 'undefined') {
     window.bazingaApp = BazingaApp;
