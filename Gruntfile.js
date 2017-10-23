@@ -35,6 +35,17 @@ module.exports = function(grunt) {
       },
       target: ['web-layer/scripts/*.js']
     },
+    concat: {
+      options: {
+        separator: ';'
+      },
+      dist: {
+        src: [
+          'web-layer/scripts/*.js'
+        ],
+        dest: 'dist/built.js'
+      }
+    },
     browserSync: {
       dev: {
         bsFiles: {
