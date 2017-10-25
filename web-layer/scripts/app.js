@@ -21,8 +21,9 @@
   /**
    * Add all developers to the #devs-list container and render it
    */
-  function laodDevs() {
-    var list = jqLite.qs('#devs-list');
+  function init() {
+    var devsContainer = jqLite.qs('#devs-list');
+
     // TODO need to be refactored
     getDevsInfo(renderDevs);
 
@@ -35,7 +36,7 @@
       data.forEach(function(dev) {
         var devTemp = new BazingaApp.Template(),
           article = jqLite.createElement('article');
-        list.appendChild(article);
+        devsContainer.appendChild(article);
         article.innerHTML = devTemp.addDev(dev);
       });
     }
@@ -44,10 +45,10 @@
   // Example of using $on method. This should be used to change the info panel of developers
 
   jqLite.$on(helloBtn, 'click', function() {
-    alert('Bazinga!!!');
+    alert('Ohhhhh You clicked me!! You\'re so cute');
   });
 
-  jqLite.$on(scope, 'load', laodDevs());
+  jqLite.$on(scope, 'load', init());
 
   if ( typeof(scope.BazingaApp) === 'undefined') {
     window.bazingaApp = BazingaApp;
