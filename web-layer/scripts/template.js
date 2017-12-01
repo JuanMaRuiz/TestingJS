@@ -6,8 +6,8 @@
    * @constructor
    */
   function Template() {
-    this.defaultTemplate
-    = '<li class="list-group-item" data-id="{{dev.id}}">{{dev.name}}</li>';
+    this.defaultTemplate = '<h4 class="list-group-item-heading">{{dev.name}}</h4>' +
+      '<p class="list-group-item-text">{{dev.title}}</p>';
   }
 
   /**
@@ -19,9 +19,10 @@
     var template = this.defaultTemplate,
       view = '';
 
-    template = template.replace('{{id}}', data['_id']);
+    template = template.replace('{{dev.id}}', data['_id']);
     template = template.replace('{{dev.name}}', data.name);
-    view = view + template;
+    template = template.replace('{{dev.title}}', data.title);
+    view += template;
 
     return view;
   };

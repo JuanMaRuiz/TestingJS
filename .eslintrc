@@ -22,7 +22,7 @@
     "no-console": "off",
     "max-len": ["error", 150],
     // Code documentation
-    "require-jsdoc": ["error", {
+    "require-jsdoc": ["warning", {
       "require": {
         "FunctionDeclaration": true,
         "MethodDefinition": true,

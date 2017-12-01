@@ -35,18 +35,37 @@
     function renderDevs(data) {
       data.forEach(function(dev) {
         var devTemp = new BazingaApp.Template(),
-          article = jqLite.createElement('article');
-        devsContainer.appendChild(article);
-        article.innerHTML = devTemp.addDev(dev);
+          li = jqLite.createElement('a');
+        li.className = 'list-group-item';
+        li.setAttribute('href', '#');
+        li.setAttribute('data-id', dev["_id"]);
+        devsContainer.appendChild(li);
+        li.innerHTML = devTemp.addDev(dev);
       });
+
+      attachEvent();
     }
   }
 
   // Example of using $on method. This should be used to change the info panel of developers
 
   jqLite.$on(helloBtn, 'click', function() {
-    alert('Ohhhhh You clicked me!! You\'re so cute');
+    console.log('Ohhhhh You clicked me!! You\'re so cute');
   });
+
+  function attachEvent() {
+    var devsItems = jqLite.qsa('#devs-list > a');
+
+    [].map.call(devsItems, function(elem) { // https://stackoverflow.com/questions/27621699/attach-listener-to-multiple-children-elements
+      jqLite.$on(elem, 'click', function(event) {
+        console.log("event.target.getAttribute('data-id')", this.getAttribute('data-id'));
+        // Remove the class for all elements
+        jqLite.removeClass(devsItems, 'active');
+        // Add active class to the clicked element
+        this.className += ' active';
+      });
+    });
+  }
 
   jqLite.$on(scope, 'load', init());
 

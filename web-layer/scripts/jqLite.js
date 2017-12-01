@@ -58,6 +58,17 @@
   };
 
   /**
+   * Get all the elements by css selector (class or id). querySelector is widely supported from IE9.
+   * @param {String} selector CSS Selector (id or class)
+   * @param {Element} scope - If no context is provided 'document' will used
+   * @return {Element} DOM Element to be retrieved
+   */
+  jqLite.qsa = function(selector, scope) {
+    var context = scope || document;
+    return context.querySelectorAll(selector);
+  };
+
+  /**
    * Creates a new DOM element
    * @param {String} element - html tag which define the element to be created
    * @param {Element} scope - If no context is provided 'document' will used
@@ -78,6 +89,20 @@
   jqLite.$on = function(target, type, callback, options) {
     var opt = options || false;
     target.addEventListener(type, callback, opt);
+  };
+
+  /**
+   * Remove the class off all elements passed as NodeList
+   * @param {NodeList} listOfElements - List of element with the given class we want to remove
+   * @param {String} classToRemove
+   */
+  jqLite.removeClass = function(listOfElements, classToRemove) {
+    var list = listOfElements,
+        max = listOfElements.length,
+        i = 0;
+    for( ; i < max; i += 1) {
+      list[i].classList.remove(classToRemove);
+    }
   };
 
   if ( !scope.jqLite ) {
