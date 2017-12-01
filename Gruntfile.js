@@ -23,7 +23,10 @@ module.exports = function(grunt) {
       styles: {
         expand: true,
         flatten: true,
-        src: ['node_modules/bootstrap/dist/css/bootstrap.css', 'node_modules/bootstrap/dist/css/bootstrap-theme.css'],
+        src: [
+          'node_modules/bootstrap/dist/css/bootstrap.css',
+          'node_modules/bootstrap/dist/css/bootstrap-theme.css'
+        ],
         dest: 'web-layer/lib/css/'
       }
     },
