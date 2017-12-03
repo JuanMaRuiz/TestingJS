@@ -38,7 +38,7 @@
           li = jqLite.createElement('a');
         li.className = 'list-group-item';
         li.setAttribute('href', '#');
-        li.setAttribute('data-id', dev["_id"]);
+        li.setAttribute('data-id', dev['_id']);
         devsContainer.appendChild(li);
         li.innerHTML = devTemp.addDev(dev);
       });
@@ -56,13 +56,13 @@
   function attachEvent() {
     var devsItems = jqLite.qsa('#devs-list > a');
 
-    [].map.call(devsItems, function(elem) { // https://stackoverflow.com/questions/27621699/attach-listener-to-multiple-children-elements
+    devsItems.forEach(function(elem) {
       jqLite.$on(elem, 'click', function(event) {
-        console.log("event.target.getAttribute('data-id')", this.getAttribute('data-id'));
+        console.log('event.target.getAttribute(\'data-id\')', elem.getAttribute('data-id'));
         // Remove the class for all elements
         jqLite.removeClass(devsItems, 'active');
         // Add active class to the clicked element
-        this.className += ' active';
+        jqLite.addClass(elem, 'active');
       });
     });
   }

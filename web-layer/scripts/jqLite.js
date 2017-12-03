@@ -58,14 +58,15 @@
   };
 
   /**
-   * Get all the elements by css selector (class or id). querySelector is widely supported from IE9.
+   * Get all the elements by css selector (class or id). querySelector is widely supported from IE9. As querySelectorAll
+   * returns list of nodes instead of an array of elements we need to convert to Array using Array.prototype.slice.call() method
    * @param {String} selector CSS Selector (id or class)
    * @param {Element} scope - If no context is provided 'document' will used
-   * @return {Element} DOM Element to be retrieved
+   * @return {Array} of DOM Elements
    */
   jqLite.qsa = function(selector, scope) {
     var context = scope || document;
-    return context.querySelectorAll(selector);
+    return Array.prototype.slice.call(context.querySelectorAll(selector));
   };
 
   /**
@@ -98,11 +99,20 @@
    */
   jqLite.removeClass = function(listOfElements, classToRemove) {
     var list = listOfElements,
-        max = listOfElements.length,
-        i = 0;
-    for( ; i < max; i += 1) {
+      max = listOfElements.length,
+      i = 0;
+    for ( ; i < max; i += 1) {
       list[i].classList.remove(classToRemove);
     }
+  };
+
+  /**
+   * Add a new class to an element
+   * @param {NodeElement} element - Element to add class
+   * @param {String} cls - Class we want to add to the element
+   */
+  jqLite.addClass = function(element, cls) {
+    element.className += ' ' + cls;
   };
 
   if ( !scope.jqLite ) {
