@@ -1,6 +1,8 @@
 {
   "name": "testing-js",
-  "description": "This is your project you should write your own description",
+  "author": "JuanMa Ruiz",
+  "repository": "https://github.com/JuanMaRuiz/TestingJS",
+  "description": "Simple JS application for playing with different Testing JS Libraries",
   "scripts": {
     "test": "./node_modules/.bin/karma start",
     "jsFix": "./node_modules/.bin/eslint . --fix",
