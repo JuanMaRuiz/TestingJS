@@ -1,7 +1,8 @@
 {
   "name": "testing-js",
   "version": "0.1.1",
-  "description": "This is your project you should write your own description",
+  "author": "JuanMa Ruiz",
+  "description": "Simple JS application for playing with different Testing JS Libraries",
   "repository": {
     "type": "git",
     "url": "https://github.com/JuanMaRuiz/testingjs"
