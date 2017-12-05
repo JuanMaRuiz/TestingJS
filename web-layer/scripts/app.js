@@ -53,6 +53,11 @@
     console.log('Ohhhhh You clicked me!! You\'re so cute');
   });
 
+  /**
+   * Attach click event handler to every element in the list of developers.
+   * TODO needs to be refactored. It could be useful to have a method in the libray to do it instead a method in the app for attaching this
+   * event to a single list of elements.
+   */
   function attachEvent() {
     var devsItems = jqLite.qsa('#devs-list > a');
 
