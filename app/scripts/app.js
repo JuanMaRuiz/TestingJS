@@ -25,14 +25,14 @@
     var devsContainer = jqLite.qs('#devs-list');
 
     // TODO need to be refactored
-    getDevsInfo(renderDevs);
+    getDevsInfo(renderListOfDevs);
 
     /**
      * TODO needs to be refactored
      * Render the list of developers
      * @param {JSON} data - Array of objects from the ajax request
      */
-    function renderDevs(data) {
+    function renderListOfDevs(data) {
       data.forEach(function(dev) {
         var devTemp = new BazingaApp.Template(),
           li = jqLite.createElement('a');
@@ -63,12 +63,25 @@
 
     devsItems.forEach(function(elem) {
       jqLite.$on(elem, 'click', function(event) {
+        var devSelected = elem.getAttribute('data-id');
         console.log('event.target.getAttribute(\'data-id\')', elem.getAttribute('data-id'));
         // Remove the class for all elements
         jqLite.removeClass(devsItems, 'active');
         // Add active class to the clicked element
         jqLite.addClass(elem, 'active');
+        renderDev(devSelected);
       });
+    });
+  }
+
+  function renderDev(dev) {
+    var img = jqLite.qs('#dev-image');
+    getDevsInfo(function() {
+      for (var dev in developers) {
+        if ( developers.hasOwnProperty(dev) ) {
+          img.src = dev.avatar;
+        }
+      }
     });
   }
 
