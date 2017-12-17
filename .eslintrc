@@ -4,16 +4,32 @@
     "google"
   ],
   "env": {
-    "browser": true,
-    "node": true
+    "browser": true
+  },
+  "globals": {
+    "jqLite": true
   },
   "rules": {
-    "no-var": 1, // Disable error when use var instead of let or const and show a warning instead
+    "no-var": 0, // Use var instead of let or const. 0 -> No warning, no error; 1 -> warning, 2 -> error.
+    "one-var": ["error", {
+        "var": "always"
+      }
+    ],
     "semi": 2,
     // enable additional rules
     "indent": ["error", 2],
     // disable rules from base configurations
     "no-console": "off",
-    "quotes": ["error", "double"],
+    "max-len": ["error", 150],
+    // Code documentation
+    "require-jsdoc": [1, {
+      "require": {
+        "FunctionDeclaration": true,
+        "MethodDefinition": true,
+        "ClassDeclaration": false,
+        "ArrowFunctionExpression": false
+      }
+    }],
+    "valid-jsdoc": "error"
   }
 }

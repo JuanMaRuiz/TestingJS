@@ -1,0 +1,44 @@
+[
+  {
+    "_id": "5dde1218d583775d9c86aea3",
+    "name": "Addy Osmani",
+    "title": "Engineering Manager at Google",
+    "bio": "Eng. Manager at Google working on @GoogleChrome & Web DevRel • Creator of TodoMVC, @Yeoman, Material Design Lite, Critical • Team @workboxjs • Husband",
+    "avatar": "images/addy-osmani.png",
+    "web": "http://addyosmani.com/",
+    "twitter": "http://twitter.com/addyosmani",
+    "github": "http://github.com/addyosmani"
+  },
+  {
+    "_id": "43de1218d583775d9c86aea3",
+    "name": "Paul Irish",
+    "title": "Performance Engineer, Google Chrome",
+    "bio": "Hello, I’m a front-end developer,and work on the Google Chrome team focused on Developer Tooling.",
+    "avatar": "images/paul-irish.jpg",
+    "web": "http://paulirish.com/",
+    "twitter": "http://twitter.com/paul_irish",
+    "github": "https://github.com/paulirish"
+  },
+  {
+    "_id": "39fe1218d583775d9c86aea3",
+    "name": "Stoyan Stefanov",
+    "title": "Senior Yahoo! Technical and architect of YSlow 2.0",
+    "bio": "Stoyan Stefanov is a Facebook engineer, ex-Yahoo, architect of the YSlow 2.0 performance tool and creator of the smush.it image optimization tool!",
+    "avatar": "images/stoyan-stefanov.jpg",
+    "web": "www.phpied.com/",
+    "twitter": "https://twitter.com/stoyanstefanov",
+    "github": "https://github.com/stoyan"
+  },
+  {
+    "_id": "29fe1218d583775d9c86aea4",
+    "name": "Sam Saccone",
+    "title": "Software Engineer",
+    "bio": "",
+    "avatar": "images/sam-saccone.jpeg",
+    "web": "",
+    "twitter": "https://twitter.com/samccone",
+    "github": "github.com/samccone"
+  }
+]
+
+

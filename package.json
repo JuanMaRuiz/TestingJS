@@ -1,30 +1,32 @@
 {
   "name": "testing-js",
+  "version": "0.1.1",
   "author": "JuanMa Ruiz",
-  "repository": "https://github.com/JuanMaRuiz/TestingJS",
   "description": "Simple JS application for playing with different Testing JS Libraries",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JuanMaRuiz/testingjs"
+  },
   "scripts": {
-    "test": "./node_modules/.bin/karma start",
+    "test": "echo TBC",
     "jsFix": "./node_modules/.bin/eslint . --fix",
-    "jslint": "./node_modules/.bin/eslint ."
+    "jslint": "./node_modules/.bin/eslint .",
+    "generateDoc": "./node_modules/.bin/jsdoc -c jsdoc-config.js README.md"
   },
   "devDependencies": {
-    "chai": "^4.1.1",
+    "chai": "^4.1.2",
     "eslint-config-google": "^0.9.1",
     "grunt": "^1.0.1",
     "grunt-browser-sync": "^2.2.0",
     "grunt-cli": "^1.2.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-eslint": "^20.0.0",
-    "jasmine-core": "^2.7.0",
+    "grunt-eslint": "^20.1.0",
     "jit-grunt": "^0.10.0",
-    "karma": "^1.7.0",
-    "karma-chrome-launcher": "^2.2.0",
-    "karma-coverage": "^1.1.1",
-    "karma-growl-reporter": "^1.0.0",
-    "karma-jasmine": "^1.1.0",
-    "karma-jasmine-html-reporter": "^0.2.2",
-    "karma-mocha": "^1.3.0",
-    "karma-safari-launcher": "^1.0.0"
+    "jsdoc": "^3.5.5"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7"
   }
 }

@@ -1,46 +1,69 @@
 module.exports = function(grunt) {
-  "use strict";
+  'use strict';
 
-  require("jit-grunt")(grunt);
+  require('jit-grunt')(grunt);
 
   grunt.initConfig({
     watch: {
       scripts: {
-        files: "dev/**/*.js",
-        tasks: ["eslint"],
+        files: 'web-layer/**/*.js',
+        tasks: ['eslint'],
         options: {
-          livereload: true,
-        },
+          livereload: true
+        }
       },
       html: {
-        files: "dev/**/*.html",
+        files: 'web-layer/**/*.html',
         options: {
-          livereload: true,
-        },
-      },
+          livereload: true
+        }
+      }
+    },
+    copy: {
+      styles: {
+        expand: true,
+        flatten: true,
+        src: [
+          'node_modules/bootstrap/dist/css/bootstrap.css',
+          'node_modules/bootstrap/dist/css/bootstrap-theme.css'
+        ],
+        dest: 'web-layer/lib/css/'
+      }
     },
     eslint: {
       options: {
         // format: 'node_modules/eslint-tap',
-        configFile: ".eslintrc",
+        configFile: '.eslintrc',
+        fix: true // By default eslint task will try to fix all lint errors if not it will fail
       },
-      target: ["dev/**/*.js"],
+      target: ['web-layer/scripts/*.js']
+    },
+    concat: {
+      options: {
+        separator: ';'
+      },
+      dist: {
+        src: [
+          'web-layer/scripts/*.js'
+        ],
+        dest: 'dist/built.js'
+      }
     },
     browserSync: {
       dev: {
         bsFiles: {
           src: [
-            "dev/scripts/*.js",
-            "dev/*.html",
-          ],
+            'web-layer/scripts/*.js',
+            'web-layer/*.html'
+          ]
         },
         options: {
           watchTask: true,
-          server: "./dev",
-        },
-      },
-    },
+          server: './web-layer'
+        }
+      }
+    }
   });
 
-  grunt.registerTask("default", ["eslint", "browserSync", "watch"]);
+  grunt.registerTask('default', ['eslint', 'copy', 'browserSync', 'watch']);
 };
