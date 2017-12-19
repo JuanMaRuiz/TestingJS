@@ -1,6 +1,6 @@
 /**
  * jqLite v0.1.0
- * @description This jqLite provides a simple API like jQuery to manipulate the DOM and add some basics useful methods like ajax request.
+ * This jqLite provides a simple API like jQuery to manipulate the DOM and add some basics useful methods like ajax request.
  * Is build in vanillaJS and the browser supports is the main objective.
  * @param {Object} window    - Window object is passed as parameter to avoid override it
  * @param {Object} document  - Document object is passed as parameter to avoid override it
@@ -17,7 +17,7 @@
   };
 
   /**
-   * @description VanillaJS implementation for Ajax request
+   * VanillaJS implementation for Ajax request
    * @param {String} url        - Url for the ajax request
    * @param {Function} callback - Callback function to execute when ajax response is received
    */

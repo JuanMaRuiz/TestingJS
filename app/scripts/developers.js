@@ -7,14 +7,13 @@
    * @constructor
    */
   function Developer() {
-    this.defaultTemplate = '<img id="dev-image" src="{{dev.image}}" alt="{{dev.name}}" style="backgroun-width: contain">' +
+    this.defaultTemplate = '<img id="dev-image" src="{{dev.image}}" alt="{{dev.name}}" style="height: 200px">' +
       '<div class="caption">' +
         '<h3>{{dev.name}}</h3>' +
         '<p>{{dev.bio}}</p>' +
         '<p><span class="glyphicon glyphicon-link" aria-hidden="true"></span> <a href="{{dev.web}}">{{dev.web}}</a></p>' +
         '<p><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <a href="{{dev.twitter}}">{{dev.twitter}}</a></p>' +
         '<p><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> <a href="{{dev.github}}">{{dev.github}}</a></p>' +
-        '<p><a id="say-hello" href="#" class="btn btn-primary" role="button">Say Hello!</a></p>' +
     '</div>';
   }
 

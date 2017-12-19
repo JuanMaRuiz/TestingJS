@@ -15,7 +15,7 @@
    * @param {Object} data - Object containing all the data for any developer
    * @return {string}
    */
-  Template.prototype.addDev = function(data) {
+  Template.prototype.render = function(data) {
     var template = this.defaultTemplate,
       view = '';
 
