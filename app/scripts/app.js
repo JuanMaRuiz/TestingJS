@@ -34,6 +34,7 @@
       attachClickEvent(li);
     });
 
+    // Render the default developer (first of the data object) in the Developer Panel
     renderDev(data[0]['_id']);
   }
 
