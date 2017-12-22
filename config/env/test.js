@@ -1,7 +1,9 @@
 'use strict';
 
 module.exports = {
-    singleRun: true,
-    reporters: ['progress', 'coverage'],
-    browsers: ['ChromeHeadless'],
+    karma: {
+        singleRun: true,
+        reporters: ['progress', 'spec','coverage'],
+        browsers: ['ChromeHeadless'],
+    }
 }
