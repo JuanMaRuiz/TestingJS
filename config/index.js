@@ -1,12 +1,4 @@
 'use strict';
-const karma = require('karma');
-
-// Detect if this is TravisCI running the tests and tell it to use chromium
-if (process.env.TRAVIS) {
-    console.log(`is Travis ${process.env.TRAVIS}`);
-    karma.config.browsers = ['Chrome_travis_ci'];
-
-}
 
 /**
  * Load app configurations
