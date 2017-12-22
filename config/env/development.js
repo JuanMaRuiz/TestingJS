@@ -3,6 +3,6 @@
 module.exports = {
     karma: {
         singleRun: false,
-        reporters: ['progress'],
+        reporters: ['progress', 'spec'],
     },
 };

@@ -2,13 +2,6 @@
 
 var envConfig = require('./config');
 
-// Detect if this is TravisCI running the tests and tell it to use chromium
-if (process.env.TRAVIS) {
-    console.log(`is Travis ${process.env.TRAVIS}`);
-    config.browsers = ['Chrome_travis_ci'];
-    
-}
-
 module.exports = function (config) {
     config.set({
         basePath: '',
