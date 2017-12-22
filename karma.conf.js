@@ -6,13 +6,7 @@ module.exports = function (config) {
     config.set({
         basePath: '',
         frameworks: ['jasmine'],
-        browsers: ['Chrome'],
-        customLaunchers: {
-            Chrome_travis_ci: {
-                base: 'Chrome',
-                flags: ['--no-sandbox']
-            }
-        },
+        browsers: envConfig.karma.browsers,
         files: [
             'app/scripts/jqLite.js',
             'app/scripts/app.js',
@@ -43,8 +37,8 @@ module.exports = function (config) {
         autoWatch: envConfig.karma.autoWatch,
     });
     // Detect if this is TravisCI running the tests and tell it to use chromium
-    if (process.env.TRAVIS) {
-        config.browsers = ['Chrome_travis_ci'];
+    // if (process.env.TRAVIS) {
+    //     config.browsers = ['Chrome_travis_ci'];
 
-    }
+    // }
 };
