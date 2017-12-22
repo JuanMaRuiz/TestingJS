@@ -37,7 +37,17 @@
     "avatar": "images/sam-saccone.jpeg",
     "web": "",
     "twitter": "https://twitter.com/samccone",
-    "github": "github.com/samccone"
+    "github": "https://github.com/samccone"
+  },
+  {
+    "_id": "29fe1218d583775d9c86aea7",
+    "name": "Nicholas C. Zakas",
+    "title": "Software Engineer",
+    "bio": "I started working on web applications in 2000 and instantly fell in love. Since that time, I've focused on front-end technology such as HTML, CSS, and JavaScript, digging in and learning all of the skills and tricks necessary to make performant, beautiful, and maintainable front-ends.",
+    "avatar": "images/zakas.jpeg",
+    "web": "http://www.nczonline.net/",
+    "twitter": "https://twitter.com/slicknet",
+    "github": "https://github.com/nzakas"
   }
 ]
 

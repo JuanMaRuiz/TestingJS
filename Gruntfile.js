@@ -6,14 +6,14 @@ module.exports = function(grunt) {
   grunt.initConfig({
     watch: {
       scripts: {
-        files: 'web-layer/**/*.js',
+        files: 'app/**/*.js',
         tasks: ['eslint'],
         options: {
           livereload: true
         }
       },
       html: {
-        files: 'web-layer/**/*.html',
+        files: 'app/**/*.html',
         options: {
           livereload: true
         }
@@ -27,7 +27,7 @@ module.exports = function(grunt) {
           'node_modules/bootstrap/dist/css/bootstrap.css',
           'node_modules/bootstrap/dist/css/bootstrap-theme.css'
         ],
-        dest: 'web-layer/lib/css/'
+        dest: 'app/lib/css/'
       }
     },
     eslint: {
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
         configFile: '.eslintrc',
         fix: true // By default eslint task will try to fix all lint errors if not it will fail
       },
-      target: ['web-layer/scripts/*.js']
+      target: ['app/scripts/**/*.js']
     },
     concat: {
       options: {
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
-          'web-layer/scripts/*.js'
+          'app/scripts/**/*.js'
         ],
         dest: 'dist/built.js'
       }
@@ -53,13 +53,13 @@ module.exports = function(grunt) {
       dev: {
         bsFiles: {
           src: [
-            'web-layer/scripts/*.js',
-            'web-layer/*.html'
+            'app/scripts/*.js',
+            'app/*.html'
           ]
         },
         options: {
           watchTask: true,
-          server: './web-layer'
+          server: './app'
         }
       }
     }
