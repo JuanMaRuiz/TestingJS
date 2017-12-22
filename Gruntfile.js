@@ -36,7 +36,7 @@ module.exports = function(grunt) {
         configFile: '.eslintrc',
         fix: true // By default eslint task will try to fix all lint errors if not it will fail
       },
-      target: ['app/scripts/*.js']
+      target: ['app/scripts/**/*.js']
     },
     concat: {
       options: {
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
       },
       dist: {
         src: [
-          'app/scripts/*.js'
+          'app/scripts/**/*.js'
         ],
         dest: 'dist/built.js'
       }

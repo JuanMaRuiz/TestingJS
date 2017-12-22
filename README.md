@@ -8,9 +8,9 @@
 
 This dummy application is based on the idea of [Todo MVC](http://todomvc.com/) by [Addy Osmani](https://github.com/addyosmani), [Sindre](https://github.com/sindresorhus), and a lot of [awesome developers](https://github.com/tastejs/todomvc#team).
 
-These days there are a lot of Testing frameworks and libraries for testing our Javascript applications. Every framework an application has a different approach an some of them are oriented to TDD and other to BDD.
+These days there are a lot of Testing frameworks and libraries for testing our Javascript applications. Every framework an application has a different approach TDD vs. BDD.
 
-To try to help developers to choose the perfect Testing tool for them, we created TestingJS. It offers a simple VanillaJS application a tested with different frameworks.
+To try to help developers to choose the perfect Testing tool for them, we've created TestingJS. It offers a simple VanillaJS application tested with different frameworks.
 
 ## License
 
