@@ -3,11 +3,6 @@
 var envConfig = require('./config');
 
 module.exports = function (config) {
-    // Detect if this is TravisCI running the tests and tell it to use chromium
-    if (process.env.TRAVIS) {
-        config.browsers = ['Chrome_travis_ci'];
-
-    }
     config.set({
         basePath: '',
         frameworks: ['jasmine'],
@@ -47,4 +42,9 @@ module.exports = function (config) {
         singleRun: envConfig.karma.singleRun,
         autoWatch: envConfig.karma.autoWatch,
     });
+    // Detect if this is TravisCI running the tests and tell it to use chromium
+    if (process.env.TRAVIS) {
+        config.browsers = ['Chrome_travis_ci'];
+
+    }
 };
