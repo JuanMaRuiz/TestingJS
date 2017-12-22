@@ -6,6 +6,7 @@ module.exports = function (config) {
     config.set({
         basePath: '',
         frameworks: ['jasmine'],
+        port: 9876,  // karma web server port
         browsers: envConfig.karma.browsers,
         files: [
             'app/scripts/jqLite.js',
