@@ -8,7 +8,7 @@
     "url": "https://github.com/JuanMaRuiz/testingjs"
   },
   "scripts": {
-    "test": "echo TBC",
+    "test": "./node_modules/karma/bin/karma start karma.conf.js",
     "jsFix": "./node_modules/.bin/eslint . --fix",
     "jslint": "./node_modules/.bin/eslint .",
     "generateDoc": "./node_modules/.bin/jsdoc -c jsdoc-config.js README.md"
@@ -23,7 +23,13 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-eslint": "^20.1.0",
-    "jit-grunt": "^0.10.0"
+    "jasmine-core": "^2.8.0",
+    "jit-grunt": "^0.10.0",
+    "karma": "^2.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.1.1",
+    "karma-spec-reporter": "0.0.32"
   },
   "dependencies": {
     "bootstrap": "^3.3.7"
