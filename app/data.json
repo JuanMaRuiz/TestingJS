@@ -48,6 +48,16 @@
     "web": "http://www.nczonline.net/",
     "twitter": "https://twitter.com/slicknet",
     "github": "https://github.com/nzakas"
+  },
+  {
+    "_id": "29fe1218d583775d9c86aeb7",
+    "name": "John Resig",
+    "title": "Software Engineer",
+    "bio": "John Resig is best known as an expert in the JavaScript programming language and the creator of the most popular JavaScript library in the world: jQuery. He’s created numerous JavaScript projects that continue to be integral parts of modern day web development. He’s also the author of the popular JavaScript books Secrets of the JavaScript Ninja and Pro JavaScript Techniques.",
+    "avatar": "images/john-resig.jpg",
+    "web": "https://johnresig.com/",
+    "twitter": "https://twitter.com/jeresig",
+    "github": "https://github.com/jeresig"
   }
 ]
 

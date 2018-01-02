@@ -1,4 +1,6 @@
 test/**/*.js
+config/**/*.js
+karma.conf.js
 Gruntfile.js
 jsdoc-config.js
 package.json
