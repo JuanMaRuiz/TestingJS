@@ -4,6 +4,6 @@ describe("Generic tests for 'bazingaApp'", function () {
     });
 
     it("should be and object", function () {
-        expect(typeof bazingaApp).to.equal('object');
+        assert.isObject(bazingaApp)
     });
 });
