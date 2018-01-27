@@ -2,7 +2,8 @@
   'use strict';
 
   /**
-   * Define the default template for developers list name panel
+   * Define the default template for developers list name panel. Please, note that this is not the proper way to do. You should use a template
+   * engine to generate the html instead of generater is this way.
    * @constructor
    */
   function Template() {

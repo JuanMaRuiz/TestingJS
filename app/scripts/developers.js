@@ -18,7 +18,8 @@
   }
 
   /**
-   * Generates the template for a developer with the given data
+   * Generates the template for a developer with the given data. Please, note that this is not the proper way to do. You should use a template
+   * engine to generate the html instead of generater is this way.
    * @param {Object} data
    * @return {String} Contains the html to render
    */
