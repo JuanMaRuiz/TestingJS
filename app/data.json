@@ -58,6 +58,16 @@
     "web": "https://johnresig.com/",
     "twitter": "https://twitter.com/jeresig",
     "github": "https://github.com/jeresig"
+  },
+  {
+    "_id": "29fe1318d583775d9c86aeb7",
+    "name": "Matt Gaunt",
+    "title": "Staff Developer Programs Engineer at Google",
+    "bio": "Developer Programs Engineer @ Google working on web.",
+    "avatar": "images/matt-gaunt.jpg",
+    "web": "https://gauntface.com",
+    "twitter": "https://twitter.com/gauntface",
+    "github": "https://github.com/gauntface"
   }
 ]
 

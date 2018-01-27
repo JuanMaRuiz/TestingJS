@@ -23,7 +23,13 @@
   function renderListOfDevs(data) {
     var devsContainer = jqLite.qs('#devs-list');
 
-    data.forEach(function(dev) {
+    data.forEach(createDevItem);
+
+    /**
+     * Creates a link element for every developer in data.json
+     * @param {*} dev - Node DOM element
+     */
+    function createDevItem(dev) {
       var devTemp = new BazingaApp.Template(),
         li = jqLite.createElement('a');
       li.className = 'list-group-item';
@@ -32,7 +38,7 @@
       devsContainer.appendChild(li);
       li.innerHTML = devTemp.render(dev);
       attachClickEvent(li);
-    });
+    }
 
     // Render the default developer (first of the data object) in the Developer Panel
     renderDev(data[0]['_id']);
@@ -47,12 +53,6 @@
       callback(data);
     });
   }
-
-  // Example of using $on method. This should be used to change the info panel of developers
-  // var helloBtn = jqLite.qs('#say-hello');
-  // jqLite.$on(helloBtn, 'click', function() {
-  //   console.log('Ohhhhh You clicked me!! You\'re so cute');
-  // });
 
   /**
    * Attach click event handler to every element in the list of developers.
@@ -80,7 +80,6 @@
   function renderDev(devId) {
     var devPanel = jqLite.qs('#developer');
 
-    // getDevsInfo(render);
     getDevsInfo(function(developers) {
       var devTemp = new BazingaApp.Developer(),
         dev;

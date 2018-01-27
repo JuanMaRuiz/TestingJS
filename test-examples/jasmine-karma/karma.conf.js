@@ -1,6 +1,6 @@
 'use strict';
 
-var envConfig = require('./config');
+var envConfig = require('./karma-config');
 
 module.exports = function (config) {
     config.set({
@@ -9,17 +9,17 @@ module.exports = function (config) {
         port: 9876,  // karma web server port
         browsers: envConfig.karma.browsers,
         files: [
-            'app/scripts/jqLite.js',
-            'app/scripts/app.js',
-            'app/scripts/devInfo.js',
-            'app/scripts/template.js',
-            'app/scripts/developers.js',
-            'app/data.json',
-            'test/*.js',
+            '../../app/scripts/jqLite.js',
+            '../../app/scripts/app.js',
+            '../../app/scripts/devInfo.js',
+            '../../app/scripts/template.js',
+            '../../app/scripts/developers.js',
+            '../../app/data.json',
+            'tests/*.js',
         ],
         specReporter: {
             maxLogLines: 5,             // limit number of lines logged per test
-            suppressErrorSummary: true, // do not print error summary
+            suppressErrorSummary: false, // do not print error summary
             suppressFailed: false,      // do not print information about failed tests
             suppressPassed: false,      // do not print information about passed tests
             suppressSkipped: true,      // do not print information about skipped tests
