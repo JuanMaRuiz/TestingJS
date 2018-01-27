@@ -73,7 +73,7 @@
   }
 
   /**
-   * Render the developer panel with the info of the selected developer in the list
+   * Render the developer panel with the info of the selected developer from the list
    * TODO needs refactor
    * @param {Integer} devId - Id of the developer selected by the user
    */

@@ -18,7 +18,7 @@ module.exports = function (config) {
             'tests/*.js',
         ],
         specReporter: {
-            maxLogLines: 5,             // limit number of lines logged per test
+            maxLogLines: 50,             // limit number of lines logged per test
             suppressErrorSummary: false, // do not print error summary
             suppressFailed: false,      // do not print information about failed tests
             suppressPassed: false,      // do not print information about passed tests
@@ -37,9 +37,4 @@ module.exports = function (config) {
         singleRun: envConfig.karma.singleRun,
         autoWatch: envConfig.karma.autoWatch,
     });
-    // Detect if this is TravisCI running the tests and tell it to use chromium
-    // if (process.env.TRAVIS) {
-    //     config.browsers = ['Chrome_travis_ci'];
-
-    // }
 };

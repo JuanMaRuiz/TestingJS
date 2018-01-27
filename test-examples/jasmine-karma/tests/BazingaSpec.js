@@ -1,4 +1,4 @@
-describe("Generic tests for 'bazingaApp' library. 'bazingaApp'", function() {
+describe("Generic tests for 'bazingaApp'", function() {
     it("should be defined on window load", function() {
         expect(bazingaApp).toBeDefined();
     });
