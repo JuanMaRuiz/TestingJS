@@ -4,6 +4,7 @@ node_js:
 cache:
   directories:
     - node_modules
+sudo: required
 before_install:
   - google-chrome-stable --headless --no-sandbox
 install:
