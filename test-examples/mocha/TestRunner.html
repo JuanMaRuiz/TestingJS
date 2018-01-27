@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Mocha Tests</title>
+    <link href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="mocha"></div>
+
+    <script src="../../node_modules/chai/chai.js"></script>
+    <script src="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.js"></script>
+
+    <script>
+        mocha.ui('bdd');
+        mocha.reporter('html');
+        var expect = chai.expect;
+        var assert = chai.assert;
+    </script>
+    
+    <script src="../../app/scripts/jqLite.js"></script>
+    <script src="../../app/scripts/app.js"></script>
+    <script src="../../app/scripts/devInfo.js"></script>
+    <script src="../../app/scripts/template.js"></script>
+    <script src="../../app/scripts/developers.js"></script>
+    <!-- All your tests here -->
+    <script src="./test/test.bazinga.js"></script>
+    
+    <script>
+        mocha.checkLeaks();
+        mocha.run();
+    </script>
+</body>
+
+</html>
