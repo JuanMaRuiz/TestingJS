@@ -68,6 +68,16 @@
     "web": "https://gauntface.com",
     "twitter": "https://twitter.com/gauntface",
     "github": "https://github.com/gauntface"
+  },
+  {
+    "_id": "29fe1318d583775d9c86aeb7",
+    "name": "Ilya Grigorik",
+    "title": "Web performance engineer at Google",
+    "bio": "Ilya Grigorik is a web performance engineer at Google, co-chair of the W3C Web Performance working group, and author of High Performance Browser Networking (O'Reilly) book.",
+    "avatar": "images/ilya-grigorik.jpeg",
+    "web": "https://igvita.com",
+    "twitter": "https://twitter.com/igrigorik",
+    "github": "https://github.com/igrigorik"
   }
 ]
 
