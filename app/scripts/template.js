@@ -7,8 +7,8 @@
    * @constructor
    */
   function Template() {
-    this.defaultTemplate = '<h4 class="list-group-item-heading">{{dev.name}}</h4>' +
-      '<p class="list-group-item-text">{{dev.title}}</p>';
+    this.defaultTemplate = '<h5 class="mb-1">{{dev.name}}</h5>' +
+      '<p>{{dev.title}}</p>';
   }
 
   /**
