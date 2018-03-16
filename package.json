@@ -9,8 +9,6 @@
   },
   "scripts": {
     "test": "./node_modules/karma/bin/karma start test-examples/jasmine-karma/karma.conf.js",
-    "jsFix": "./node_modules/.bin/eslint . --fix",
-    "jslint": "./node_modules/.bin/eslint .",
     "generateDoc": "./node_modules/.bin/jsdoc -c jsdoc-config.js README.md"
   },
   "devDependencies": {
