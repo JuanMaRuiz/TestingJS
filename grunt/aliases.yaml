@@ -1,0 +1,5 @@
+default:
+  - 'eslint'
+  - 'copy'
+  - 'browserSync'
+  - 'watch'

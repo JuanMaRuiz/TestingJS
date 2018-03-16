@@ -1,5 +1,6 @@
 test-examples/**/*.js
 test-examples/**/*.json
+grunt/
 Gruntfile.js
 jsdoc-config.js
 package.json
