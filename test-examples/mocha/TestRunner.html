@@ -3,17 +3,17 @@
 <head>
     <meta charset="utf-8">
     <title>Mocha Tests</title>
-    <link href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css" rel="stylesheet" />
+    <link href="../../node_modules/mocha/mocha.css" rel="stylesheet" />
 </head>
 
 <body>
     <div id="mocha"></div>
 
     <script src="../../node_modules/chai/chai.js"></script>
-    <script src="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.js"></script>
+    <script src="../../node_modules/mocha/mocha.js"></script>
 
     <script>
-        mocha.ui('bdd');
+        mocha.ui('tdd');
         mocha.reporter('html');
         var expect = chai.expect;
         var assert = chai.assert;
@@ -25,7 +25,8 @@
     <script src="../../app/scripts/template.js"></script>
     <script src="../../app/scripts/developers.js"></script>
     <!-- All your tests here -->
-    <script src="./test/test.bazinga.js"></script>
+    <script src="./test/bazinga.test.js"></script>
+    <script src="./test/jqLite.test.js"></script>
     
     <script>
         mocha.checkLeaks();
