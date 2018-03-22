@@ -10,9 +10,11 @@
   "scripts": {
     "test": "karma start test-examples/jasmine-karma/karma.conf.js",
     "generateDoc": "jsdoc -c jsdoc-config.js README-foo.md",
-    "coverage": "nyc mocha"
+    "coverage": "nyc mocha",
+    "start": "node index.js"
   },
   "devDependencies": {
+    "browser-sync": "^2.23.6",
     "chai": "^4.1.2",
     "eslint-config-google": "^0.9.1",
     "grunt": "^1.0.1",
