@@ -5,7 +5,7 @@ module.exports = {
         singleRun: false,
         failFast: true,
         browsers: ['Chrome'],
-        reporters: ['progress', 'spec'],
+        reporters: ['progress', 'spec', 'coverage'],
         plugins: ['karma-spec-reporter']
     },
 };

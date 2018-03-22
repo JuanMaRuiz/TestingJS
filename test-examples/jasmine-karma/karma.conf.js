@@ -24,9 +24,17 @@ module.exports = function (config) {
             suppressPassed: false,      // do not print information about passed tests
             suppressSkipped: true,      // do not print information about skipped tests
             showSpecTiming: false,      // print the time elapsed for each spec
-            failFast: true              // test would finish with error when a first fail occurs. 
+            failFast: true              // test would finish with error when a first fail occurs.
         },
         reporters: envConfig.karma.reporters,
+        preprocessors: {
+          '../../app/scripts/**/*.js': ['coverage']
+        },
+        coverageReporter: {
+          // specify a common output directory
+          dir: 'coverage/',
+          reporters: [{ type: 'html', subdir: 'report-html' }]
+        },
         // enable / disable colors in the output (reporters and logs)
         colors: true,
         // level of logging
