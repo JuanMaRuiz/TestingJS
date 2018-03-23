@@ -16,6 +16,9 @@
         mocha.reporter('html');
         var expect = chai.expect;
         var assert = chai.assert;
+        // Due mocha has a global leak detection feature we need to ignore __browserSyn__ global variable
+        // in order to avoid fake fails on tests. More info: https://stackoverflow.com/questions/8360318/global-leak-errors-in-mocha#answer-10040921
+        mocha.setup({globals: '___browserSync___'});
     </script>
 
     <script src="/app/scripts/jqLite.js"></script>
