@@ -6,7 +6,7 @@ bs.watch("test-examples/**/*.js").on("change", bs.reload);
 bs.init({
     server: {
         baseDir: __dirname,
-        index: '/test-examples/jasmine-standalone-3.1.0/TestRunner.html',
+        index: `/test-examples/${process.argv[2]}/TestRunner.html`,
     },
     host: 'localhost',
     port: 3000

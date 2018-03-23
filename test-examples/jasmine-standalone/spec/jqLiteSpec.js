@@ -1,5 +1,5 @@
 // Define generic path for fixtures
-jasmine.getFixtures().fixturesPath = '/test-examples/jasmine-standalone-3.1.0/spec/javascripts/fixtures/';
+jasmine.getFixtures().fixturesPath = "/test-examples/jasmine-standalone/fixtures/"
 
 describe("jqLite generic Tests", function () {
   it("jqLite should be defined in window object", function () {
