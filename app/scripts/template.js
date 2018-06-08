@@ -17,7 +17,7 @@
    * @return {string}
    */
   Template.prototype.render = function(data) {
-    var template = this.defaultTemplate,
+    let template = this.defaultTemplate,
       view = '';
 
     template = template.replace('{{dev.id}}', data['_id']);

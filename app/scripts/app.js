@@ -21,7 +21,7 @@
    * @param {JSON} data - Array of objects from the ajax request
    */
   function renderListOfDevs(data) {
-    var devsContainer = jqLite.qs('#devs-list');
+    const devsContainer = jqLite.qs('#devs-list');
 
     data.forEach(createDevItem);
 
@@ -30,7 +30,7 @@
      * @param {*} dev - Node DOM element
      */
     function createDevItem(dev) {
-      var devTemp = new BazingaApp.Template(),
+      const devTemp = new BazingaApp.Template(),
         li = jqLite.createElement('a');
       li.className = 'list-group-item';
       li.setAttribute('href', '#');
@@ -61,10 +61,8 @@
    */
   function attachClickEvent(elem) {
     jqLite.$on(elem, 'click', function(event) {
-      var devId = elem.getAttribute('data-id'),
-        list;
-      // Remove the active class for all elements
-      list = jqLite.qsa('#devs-list > a');
+      const devId = elem.getAttribute('data-id');
+      const list = jqLite.qsa('#devs-list > a');
       jqLite.removeClass(list, 'active');
       // Add active class to the clicked element
       jqLite.addClass(elem, 'active');
@@ -78,13 +76,12 @@
    * @param {Integer} devId - Id of the developer selected by the user
    */
   function renderDev(devId) {
-    var devPanel = jqLite.qs('#developer');
+    const devPanel = jqLite.qs('#developer');
 
     getDevsInfo(function(developers) {
-      var devTemp = new BazingaApp.Developer(),
-        dev;
+      const devTemp = new BazingaApp.Developer();
 
-      for (dev in developers) {
+      for ( const dev in developers) {
         if (developers.hasOwnProperty(dev) && developers[dev]['_id'] == devId) {
           devPanel.innerHTML = devTemp.render(developers[dev]);
         }

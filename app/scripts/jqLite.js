@@ -8,7 +8,7 @@
 (function(window) {
   'use strict';
 
-  var VERSION = '0.1.0',
+  const VERSION = '0.1.0',
     scope = window,
     jqLite = {};
 
@@ -22,7 +22,7 @@
    * @param {Function} callback - Callback function to execute when ajax response is received
    */
   jqLite.ajax = function(url, callback) {
-    var httpRequest = new XMLHttpRequest();
+    const httpRequest = new XMLHttpRequest();
 
     if ( !httpRequest ) {
       throw new Error('Sorry there was an error creating an XMLHTTP instance');
@@ -53,7 +53,7 @@
    * @return {Element} DOM Element to be retrieved
    */
   jqLite.qs = function(selector, scope) {
-    var context = scope || document;
+    const context = scope || document;
     return context.querySelector(selector);
   };
 
@@ -65,7 +65,7 @@
    * @return {Array} of DOM Elements
    */
   jqLite.qsa = function(selector, scope) {
-    var context = scope || document;
+    const context = scope || document;
     return Array.prototype.slice.call(context.querySelectorAll(selector));
   };
 
@@ -76,7 +76,7 @@
    * @return {Element} DOM Element to be created
    */
   jqLite.createElement = function(element, scope) {
-    var context = scope || document;
+    const context = scope || document;
     return context.createElement(element);
   };
 
@@ -88,7 +88,7 @@
    * @param {Object} options - Object that specifies characteristics about the event listener
    */
   jqLite.$on = function(target, type, callback, options) {
-    var opt = options || false;
+    const opt = options || false;
     target.addEventListener(type, callback, opt);
   };
 
@@ -98,9 +98,9 @@
    * @param {String} classToRemove
    */
   jqLite.removeClass = function(listOfElements, classToRemove) {
-    var list = listOfElements,
-      max = listOfElements.length,
-      i = 0;
+    const list = listOfElements,
+      max = listOfElements.length;
+    let i = 0;
     for ( ; i < max; i += 1) {
       list[i].classList.remove(classToRemove);
     }

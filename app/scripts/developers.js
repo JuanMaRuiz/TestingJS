@@ -24,7 +24,7 @@
    * @return {String} Contains the html to render
    */
   Developer.prototype.render = function(data) {
-    var template = this.defaultTemplate,
+    let template = this.defaultTemplate,
       view = '';
 
     template = template.replace(/{{dev.image}}/g, data.avatar);

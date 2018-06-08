@@ -4,13 +4,17 @@
     "google"
   ],
   "env": {
-    "browser": true
+    "browser": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6
   },
   "globals": {
     "jqLite": true
   },
   "rules": {
-    "no-var": 0, // Use var instead of let or const. 0 -> No warning, no error; 1 -> warning, 2 -> error.
+    "no-var": 1, // Use var instead of let or const. 0 -> No warning, no error; 1 -> warning, 2 -> error.
     "one-var": ["error", {
         "var": "always"
       }
@@ -30,6 +34,13 @@
         "ArrowFunctionExpression": false
       }
     }],
-    "valid-jsdoc": "error"
+    "valid-jsdoc": "error",
+        "prefer-const": [
+          "error",
+          {
+            "destructuring": "any",
+            "ignoreReadBeforeAssign": false
+          }
+        ]
   }
 }
