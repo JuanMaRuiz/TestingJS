@@ -7,13 +7,15 @@
    * @constructor
    */
   function DeveloperTemplate() {
-    this.defaultTemplate = '<img id="dev-image" src="{{dev.image}}" alt="{{dev.name}}" style="height: 200px">' +
-      '<div class="caption">' +
-        '<h3>{{dev.name}}</h3>' +
-        '<p>{{dev.bio}}</p>' +
-        '<p><span class="glyphicon glyphicon-link" aria-hidden="true"></span> <a href="{{dev.web}}">{{dev.web}}</a></p>' +
-        '<p><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <a href="{{dev.twitter}}">{{dev.twitter}}</a></p>' +
-        '<p><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> <a href="{{dev.github}}">{{dev.github}}</a></p>' +
+    this.defaultTemplate = '<div class="card border-light mb-3">' +
+    '<div class="card-header">{{dev.name}}</div>' +
+    '<div class="card-body">'+
+    '<p class="img"><img id="dev-image" class="img-rounded" src="{{dev.image}}" alt="{{dev.name}}" style="height: 200px"></p>' +
+        '<p class="card-text">{{dev.bio}}</p>' +
+        '<p class="card-text"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> <a href="{{dev.web}}">{{dev.web}}</a></p>' +
+        '<p class="card-text"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> <a href="{{dev.twitter}}">{{dev.twitter}}</a></p>' +
+        '<p class="card-text"><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> <a href="{{dev.github}}">{{dev.github}}</a></p>' +
+      '<div>' +
     '</div>';
   }
 
