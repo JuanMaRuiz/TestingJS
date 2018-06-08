@@ -26,7 +26,7 @@
     data.forEach(createDevItem);
 
     /**
-     * Creates a link element for every developer in data.json
+     * Creates a link element for every developer found in data.json
      * @param {*} dev - Node DOM element
      */
     function createDevItem(dev) {
@@ -34,14 +34,14 @@
         li = jqLite.createElement('a');
       li.className = 'list-group-item';
       li.setAttribute('href', '#');
-      li.setAttribute('data-id', dev['_id']);
+      li.setAttribute('data-id', dev.id);
       devsContainer.appendChild(li);
       li.innerHTML = devTemp.render(dev);
       attachClickEvent(li);
     }
 
-    // Render the default developer (first of the data object) in the Developer Panel
-    renderDev(data[0]['_id']);
+    // Render the default developer (first of the data object) in the DeveloperTemplate Panel
+    renderDev(data[0].id);
   }
 
   /**
@@ -49,8 +49,14 @@
    * @param {Function} callback - Function to be executed when all data have been retrieved via ajax request
    */
   function getDevsInfo(callback) {
+    const listOfDevelopers = [];
     jqLite.ajax('data.json', function(data) {
-      callback(data);
+      for ( const item of data ) {
+        // TODO Developer should be imported with import statement but project needs babel to compile JS before
+        const dev = new Developer(item['_id'], item.name, item.title, item.bio, item.avatar, item.web, item.twitter, item.github);
+        listOfDevelopers.push(dev);
+      }
+      callback(listOfDevelopers);
     });
   }
 
@@ -60,7 +66,7 @@
    * info related with him
    */
   function attachClickEvent(elem) {
-    jqLite.$on(elem, 'click', function(event) {
+    jqLite.$on(elem, 'click', (event) => {
       const devId = elem.getAttribute('data-id');
       const list = jqLite.qsa('#devs-list > a');
       jqLite.removeClass(list, 'active');
@@ -79,11 +85,11 @@
     const devPanel = jqLite.qs('#developer');
 
     getDevsInfo(function(developers) {
-      const devTemp = new BazingaApp.Developer();
+      const developerTemplate = new BazingaApp.DeveloperTemplate();
 
       for ( const dev in developers) {
-        if (developers.hasOwnProperty(dev) && developers[dev]['_id'] == devId) {
-          devPanel.innerHTML = devTemp.render(developers[dev]);
+        if (developers.hasOwnProperty(dev) && developers[dev].id == devId) {
+          devPanel.innerHTML = developerTemplate.render(developers[dev]);
         }
       }
     });

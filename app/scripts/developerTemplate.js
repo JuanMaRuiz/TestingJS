@@ -3,10 +3,10 @@
 
 
   /**
-   * Define the default template for the Developer panel
+   * Define the default template for the DeveloperTemplate panel
    * @constructor
    */
-  function Developer() {
+  function DeveloperTemplate() {
     this.defaultTemplate = '<img id="dev-image" src="{{dev.image}}" alt="{{dev.name}}" style="height: 200px">' +
       '<div class="caption">' +
         '<h3>{{dev.name}}</h3>' +
@@ -23,7 +23,7 @@
    * @param {Object} data
    * @return {String} Contains the html to render
    */
-  Developer.prototype.render = function(data) {
+  DeveloperTemplate.prototype.render = function(data) {
     let template = this.defaultTemplate,
       view = '';
 
@@ -38,5 +38,5 @@
   };
 
   scope.bazingaApp = scope.bazingaApp || {};
-  scope.bazingaApp.Developer = Developer;
+  scope.bazingaApp.DeveloperTemplate = DeveloperTemplate;
 })(window);

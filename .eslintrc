@@ -8,10 +8,12 @@
     "es6": true
   },
   "parserOptions": {
-    "ecmaVersion": 6
+    "ecmaVersion": 6,
+    "sourceType": "module"
   },
   "globals": {
-    "jqLite": true
+    "jqLite": true,
+    "Developer": true
   },
   "rules": {
     "no-var": 1, // Use var instead of let or const. 0 -> No warning, no error; 1 -> warning, 2 -> error.

@@ -11,9 +11,9 @@ module.exports = function (config) {
         files: [
             '../../app/scripts/jqLite.js',
             '../../app/scripts/app.js',
-            '../../app/scripts/devInfo.js',
+            '../../app/scripts/developer.js',
             '../../app/scripts/template.js',
-            '../../app/scripts/developers.js',
+            '../../app/scripts/developerTemplate.js',
             '../../app/data.json',
             'tests/*.js',
         ],
