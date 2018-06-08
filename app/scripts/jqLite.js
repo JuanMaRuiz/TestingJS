@@ -19,32 +19,49 @@
   /**
    * VanillaJS implementation for Ajax request
    * @param {String} url        - Url for the ajax request
-   * @param {Function} callback - Callback function to execute when ajax response is received
+   * @param {Function} callback - Callback function to execute when fetch response is received
    */
   jqLite.ajax = function(url, callback) {
-    const httpRequest = new XMLHttpRequest();
-
-    if ( !httpRequest ) {
-      throw new Error('Sorry there was an error creating an XMLHTTP instance');
+    if (fetch) {
+      fetch(url)
+        .then((response) => response.json())
+        .catch((error) => {
+          throw new Error(`Sorry, there was an error processing your request: ${error}`);
+        })
+        .then( ( result ) => callback(result) );
+    } else {
+      makeRequest(url, callback);
     }
+  };
 
-    httpRequest.onreadystatechange = makeRequest;
+  /**
+   * Creates a new XMLHttpRequest if browser is not compatible with fetch method
+   * @param {String} url        - Url for the XMLHttpRequest request
+   * @param {Function} callback - Callback function to execute when XMLHttpRequest response is received
+   */
+  function makeRequest(url, callback) {
+    const httpRequest = new XMLHttpRequest();
+    httpRequest.onreadystatechange = doRequest;
     httpRequest.open('GET', url);
     httpRequest.send();
+
+    if (!httpRequest) {
+      throw new Error('Sorry there was an error creating an XMLHttpRequest instance');
+    }
 
     /**
      * Checks if the response was received and OK. Then send the response of the url provided to the callback function
      */
-    function makeRequest() {
+    function doRequest() {
       try {
-        if ( httpRequest.readyState == 4 && httpRequest.status == 200 ) {
+        if (httpRequest.readyState == 4 && httpRequest.status == 200) {
           callback(JSON.parse(httpRequest.responseText));
         }
       } catch (err) {
         throw new Error('Sorry, there was an error processing your request: ' + err);
       }
     }
-  };
+  }
 
   /**
    * Get Element by css selector (class or id). querySelector is widely supported from IE9.
@@ -98,11 +115,8 @@
    * @param {String} classToRemove
    */
   jqLite.removeClass = function(listOfElements, classToRemove) {
-    const list = listOfElements,
-      max = listOfElements.length;
-    let i = 0;
-    for ( ; i < max; i += 1) {
-      list[i].classList.remove(classToRemove);
+    for ( const dev of listOfElements) {
+      dev.classList.remove(classToRemove);
     }
   };
 
@@ -115,7 +129,7 @@
     element.className += ' ' + cls;
   };
 
-  if ( !scope.jqLite ) {
+  if (!scope.jqLite) {
     scope.jqLite = jqLite;
   }
 })(window);
