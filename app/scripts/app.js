@@ -70,6 +70,7 @@
     jqLite.$on(elem, 'click', (event) => {
       const devId = elem.getAttribute('data-id');
       const list = jqLite.qsa('#devs-list > span');
+      // Removes .active class from all elements
       jqLite.removeClass(list, 'active');
       // Add active class to the clicked element
       jqLite.addClass(elem, 'active');
