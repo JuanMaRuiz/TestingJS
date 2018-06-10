@@ -27,16 +27,16 @@
 
     /**
      * Creates a link element for every developer found in data.json
-     * @param {*} dev - Node DOM element
+     * @param {*} dev - Developer data to be rendered
      */
     function createDevItem(dev) {
-      const devTemp = new BazingaApp.Template(),
-        li = jqLite.createElement('a', {
-          'class': 'list-group-item list-group-item-action',
-          'href': '#',
-          'data-id': 'dev.id',
+      const devTemp = new BazingaApp.Template();
+      const li = jqLite.createElement('a', {
+        'class': 'list-group-item list-group-item-action',
+        'href': '#',
+        'data-id': 'dev.id',
+      });
 
-        });
       devsContainer.appendChild(li);
       li.innerHTML = devTemp.render(dev);
       attachClickEvent(li);
