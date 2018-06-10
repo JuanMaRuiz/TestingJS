@@ -31,9 +31,8 @@
      */
     function createDevItem(dev) {
       const devTemp = new BazingaApp.Template();
-      const li = jqLite.createElement('a', {
+      const li = jqLite.createElement('span', {
         'class': 'list-group-item list-group-item-action',
-        'href': '#',
         'data-id': dev.id,
       });
 
@@ -70,7 +69,7 @@
   function attachClickEvent(elem) {
     jqLite.$on(elem, 'click', (event) => {
       const devId = elem.getAttribute('data-id');
-      const list = jqLite.qsa('#devs-list > a');
+      const list = jqLite.qsa('#devs-list > span');
       jqLite.removeClass(list, 'active');
       // Add active class to the clicked element
       jqLite.addClass(elem, 'active');
