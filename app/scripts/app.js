@@ -34,7 +34,7 @@
       const li = jqLite.createElement('a', {
         'class': 'list-group-item list-group-item-action',
         'href': '#',
-        'data-id': 'dev.id',
+        'data-id': dev.id,
       });
 
       devsContainer.appendChild(li);
