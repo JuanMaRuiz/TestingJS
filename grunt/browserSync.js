@@ -3,6 +3,7 @@ module.exports = {
         bsFiles: {
             src: [
                 'app/scripts/*.js',
+                'app/css/*.css',
                 'app/*.html'
             ]
         },

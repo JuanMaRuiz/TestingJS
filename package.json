@@ -37,7 +37,5 @@
     "nyc": "^11.6.0",
     "time-grunt": "^1.4.0"
   },
-  "dependencies": {
-    "bootstrap": "^3.3.7"
-  }
+  "dependencies": {}
 }
