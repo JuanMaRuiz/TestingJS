@@ -4,8 +4,9 @@ module.exports = {
     },
     dist: {
         src: [
-            'app/scripts/**/*.js'
+          'lib/js/jqLite.js',
+          'app/scripts/**/*.js'
         ],
-        dest: 'dist/built.js'
+        dest: 'dist/js/built.js'
     }
 };
