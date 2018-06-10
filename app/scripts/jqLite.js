@@ -89,12 +89,18 @@
   /**
    * Creates a new DOM element
    * @param {String} element - html tag which define the element to be created
-   * @param {Element} scope - If no context is provided 'document' will used
+   * @param {Object} config - [Optional] Receive an object with the configuragion of the element. This configuration contains
+   * all the attributes the element should have to be created
    * @return {Element} DOM Element to be created
    */
-  jqLite.createElement = function(element, scope) {
-    const context = scope || document;
-    return context.createElement(element);
+  jqLite.createElement = function(element, config) {
+    const domElement = document.createElement(element);
+    if ( config ) {
+      for (const [key, value] of Object.entries(config) ) {
+        domElement.setAttribute(key, value);
+      }
+    }
+    return domElement;
   };
 
   /**

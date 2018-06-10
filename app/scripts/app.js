@@ -31,10 +31,12 @@
      */
     function createDevItem(dev) {
       const devTemp = new BazingaApp.Template(),
-        li = jqLite.createElement('a');
-      li.className = 'list-group-item list-group-item-action';
-      li.setAttribute('href', '#');
-      li.setAttribute('data-id', dev.id);
+        li = jqLite.createElement('a', {
+          'class': 'list-group-item list-group-item-action',
+          'href': '#',
+          'data-id': 'dev.id',
+
+        });
       devsContainer.appendChild(li);
       li.innerHTML = devTemp.render(dev);
       attachClickEvent(li);
