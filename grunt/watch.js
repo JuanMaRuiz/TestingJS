@@ -11,5 +11,11 @@ module.exports = {
         options: {
             livereload: true
         }
+    },
+    css: {
+        files: 'app/**/*.css',
+        options: {
+            livereload: true
+        }
     }
 };

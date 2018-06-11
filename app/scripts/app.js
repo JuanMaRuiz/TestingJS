@@ -21,27 +21,28 @@
    * @param {JSON} data - Array of objects from the ajax request
    */
   function renderListOfDevs(data) {
-    var devsContainer = jqLite.qs('#devs-list');
+    const devsContainer = jqLite.qs('#devs-list');
 
     data.forEach(createDevItem);
 
     /**
-     * Creates a link element for every developer in data.json
-     * @param {*} dev - Node DOM element
+     * Creates a link element for every developer found in data.json
+     * @param {*} dev - Developer data to be rendered
      */
     function createDevItem(dev) {
-      var devTemp = new BazingaApp.Template(),
-        li = jqLite.createElement('a');
-      li.className = 'list-group-item';
-      li.setAttribute('href', '#');
-      li.setAttribute('data-id', dev['_id']);
+      const devTemp = new BazingaApp.Template();
+      const li = jqLite.createElement('span', {
+        'class': 'list-group-item list-group-item-action',
+        'data-id': dev.id,
+      });
+
       devsContainer.appendChild(li);
       li.innerHTML = devTemp.render(dev);
       attachClickEvent(li);
     }
 
-    // Render the default developer (first of the data object) in the Developer Panel
-    renderDev(data[0]['_id']);
+    // Render the default developer (first of the data object) in the DeveloperTemplate Panel
+    renderDev(data[0].id);
   }
 
   /**
@@ -49,8 +50,14 @@
    * @param {Function} callback - Function to be executed when all data have been retrieved via ajax request
    */
   function getDevsInfo(callback) {
+    const listOfDevelopers = [];
     jqLite.ajax('data.json', function(data) {
-      callback(data);
+      for ( const item of data ) {
+        // TODO Developer should be imported with import statement but project needs babel to compile JS before
+        const dev = new Developer(item['_id'], item.name, item.title, item.bio, item.avatar, item.web, item.twitter, item.github);
+        listOfDevelopers.push(dev);
+      }
+      callback(listOfDevelopers);
     });
   }
 
@@ -60,11 +67,9 @@
    * info related with him
    */
   function attachClickEvent(elem) {
-    jqLite.$on(elem, 'click', function(event) {
-      var devId = elem.getAttribute('data-id'),
-        list;
-      // Remove the active class for all elements
-      list = jqLite.qsa('#devs-list > a');
+    jqLite.$on(elem, 'click', (event) => {
+      const devId = elem.getAttribute('data-id');
+      const list = jqLite.qsa('#devs-list > span');
       jqLite.removeClass(list, 'active');
       // Add active class to the clicked element
       jqLite.addClass(elem, 'active');
@@ -78,15 +83,14 @@
    * @param {Integer} devId - Id of the developer selected by the user
    */
   function renderDev(devId) {
-    var devPanel = jqLite.qs('#developer');
+    const devPanel = jqLite.qs('#developer');
 
     getDevsInfo(function(developers) {
-      var devTemp = new BazingaApp.Developer(),
-        dev;
+      const developerTemplate = new BazingaApp.DeveloperTemplate();
 
-      for (dev in developers) {
-        if (developers.hasOwnProperty(dev) && developers[dev]['_id'] == devId) {
-          devPanel.innerHTML = devTemp.render(developers[dev]);
+      for ( const dev in developers) {
+        if (developers.hasOwnProperty(dev) && developers[dev].id == devId) {
+          devPanel.innerHTML = developerTemplate.render(developers[dev]);
         }
       }
     });

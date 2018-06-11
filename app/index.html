@@ -13,8 +13,20 @@
     <header>
       <h1 class="title">Cool Developers</h1>
     </header> <!-- /. End of colunm -> container div for h1 -->
-        
+
     <div class="row">
+        <div class="form col-xs-4 col-md-4">
+          <div class="form-group">
+            <label class="col-form-label" for="inputDefault">Search developer</label>
+            <input type="text" class="form-control" placeholder="Search" id="search">
+          </div>
+        </div>
+        <div class="col-xs-2 col-md-2 align-center">
+          <button type="button" class="btn btn-primary">Search</button>
+        </div>
+    </div>
+    <div class="row">
+
       <div class="col-xs-12 col-md-6 col-lg-6">
         <div id="devs-list" class="list-group">
           <!-- Here goes the list of developers -->
@@ -22,7 +34,7 @@
       </div>
       <!-- /.End of devs list -->
       <div class="col-xs-12 col-md-6 col-lg-6">
-        <div class="thumbnail" id="developer">
+        <div id="developer">
             <!-- Here goes the thumbail of the developer  -->
         </div>
       </div>
@@ -34,8 +46,8 @@
 
   <script src="scripts/jqLite.js"></script>
   <script src="scripts/app.js"></script>
-  <script src="scripts/devInfo.js"></script>
   <script src="scripts/template.js"></script>
-  <script src="scripts/developers.js"></script>
+  <script src="scripts/developerTemplate.js"></script>
+  <script src="scripts/developer.js"></script>
 </body>
 </html>
