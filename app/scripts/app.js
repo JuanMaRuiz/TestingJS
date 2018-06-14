@@ -2,6 +2,7 @@
   'use strict';
 
   var BazingaApp = BazingaApp || {};
+  const listOfDevelopers = [];
 
   BazingaApp.sayThanks = function() {
     jqLite.thanks();
@@ -50,11 +51,11 @@
    * @param {Function} callback - Function to be executed when all data have been retrieved via ajax request
    */
   function getDevsInfo(callback) {
-    const listOfDevelopers = [];
+    // const listOfDevelopers = [];
     jqLite.ajax('data.json', function(data) {
-      for ( const item of data ) {
+      for ( const developer of data ) {
         // TODO Developer should be imported with import statement but project needs babel to compile JS before
-        const dev = new Developer(item['_id'], item.name, item.title, item.bio, item.avatar, item.web, item.twitter, item.github);
+        const dev = new Developer(developer);
         listOfDevelopers.push(dev);
       }
       callback(listOfDevelopers);
@@ -86,15 +87,12 @@
   function renderDev(devId) {
     const devPanel = jqLite.qs('#developer');
 
-    getDevsInfo(function(developers) {
-      const developerTemplate = new BazingaApp.DeveloperTemplate();
-
-      for ( const dev in developers) {
-        if (developers.hasOwnProperty(dev) && developers[dev].id == devId) {
-          devPanel.innerHTML = developerTemplate.render(developers[dev]);
-        }
+    for (const dev in listOfDevelopers) {
+      if (listOfDevelopers.hasOwnProperty(dev) && listOfDevelopers[dev].id == devId) {
+        const developer = new Developer(listOfDevelopers[dev]);
+        devPanel.innerHTML = developer.render();
       }
-    });
+    }
   }
 
   jqLite.$on(scope, 'load', BazingaApp.init());
