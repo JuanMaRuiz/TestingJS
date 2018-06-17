@@ -4,12 +4,8 @@
   var BazingaApp = BazingaApp || {};
   const listOfDevelopers = [];
 
-  BazingaApp.sayThanks = function() {
-    jqLite.thanks();
-  };
-
   /**
-   * Init the application
+   * Initialize the application
    */
   BazingaApp.init = function() {
     // TODO need to be refactored
@@ -47,7 +43,7 @@
   }
 
   /**
-   * @description Retrieve all the info about developers
+   * Retrieve all the info about developers
    * @param {Function} callback - Function to be executed when all data have been retrieved via ajax request
    */
   function getDevsInfo(callback) {
@@ -95,6 +91,7 @@
     }
   }
 
+  // Init application on window load
   jqLite.$on(scope, 'load', BazingaApp.init());
 
   if ( typeof(scope.BazingaApp) === 'undefined') {
