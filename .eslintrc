@@ -14,6 +14,7 @@
   "globals": {
     "jqLite": true,
     "Developer": true,
+    "Developers": true,
     "require": true
   },
   "rules": {

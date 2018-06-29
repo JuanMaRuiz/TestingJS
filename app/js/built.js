@@ -2,18 +2,17 @@
   'use strict';
 
   var BazingaApp = BazingaApp || {};
-  const listOfDevelopers = [];
-
-  BazingaApp.sayThanks = function() {
-    jqLite.thanks();
-  };
+  let listOfDevelopers = [];
+  const DDBB = 'data.json';
 
   /**
-   * Init the application
+   * Initialize the application
    */
   BazingaApp.init = function() {
-    // TODO need to be refactored
-    getDevsInfo(renderListOfDevs);
+    jqLite.ajax(DDBB, (data) => {
+      listOfDevelopers = new Developers(data);
+      renderListOfDevs(listOfDevelopers);
+    });
   };
 
   /**
@@ -23,8 +22,9 @@
    */
   function renderListOfDevs(data) {
     const devsContainer = jqLite.qs('#devs-list');
+    const developers = data.listOfDevelopers;
 
-    data.forEach(createDevItem);
+    developers.forEach(createDevItem);
 
     /**
      * Creates a link element for every developer found in data.json
@@ -43,23 +43,7 @@
     }
 
     // Render the default developer (first of the data object) in the DeveloperTemplate Panel
-    renderDev(data[0].id);
-  }
-
-  /**
-   * @description Retrieve all the info about developers
-   * @param {Function} callback - Function to be executed when all data have been retrieved via ajax request
-   */
-  function getDevsInfo(callback) {
-    // const listOfDevelopers = [];
-    jqLite.ajax('data.json', function(data) {
-      for ( const developer of data ) {
-        // TODO Developer should be imported with import statement but project needs babel to compile JS before
-        const dev = new Developer(developer);
-        listOfDevelopers.push(dev);
-      }
-      callback(listOfDevelopers);
-    });
+    renderDev(developers[0].id);
   }
 
   /**
@@ -87,14 +71,15 @@
   function renderDev(devId) {
     const devPanel = jqLite.qs('#developer');
 
-    for (const dev in listOfDevelopers) {
-      if (listOfDevelopers.hasOwnProperty(dev) && listOfDevelopers[dev].id == devId) {
-        const developer = new Developer(listOfDevelopers[dev]);
+    for (const dev of listOfDevelopers.listOfDevelopers) {
+      if (dev.id == devId) {
+        const developer = new Developer(listOfDevelopers.getDeveloper(dev.id));
         devPanel.innerHTML = developer.render();
       }
     }
   }
 
+  // Init application on window load
   jqLite.$on(scope, 'load', BazingaApp.init());
 
   if ( typeof(scope.BazingaApp) === 'undefined') {
@@ -137,6 +122,38 @@ class Developer { // eslint-disable-line no-unused-vars
     </div>`;
   }
 }
+;class Developers { // eslint-disable-line no-unused-vars
+  /**
+   * Default constructor which creates and array of developers
+   * @param {Object} data
+   */
+  constructor(data) {
+    this.listOfDevelopers = [];
+    this.setDeveloper(data);
+  }
+
+  /**
+   * Adds a developer to the list of developers
+   * @param {Object} data
+   */
+  setDeveloper(data) {
+    for (const developer of data) {
+      this.listOfDevelopers.push(new Developer(developer));
+    }
+  }
+
+  /**
+   * Returns a developer
+   * @param {int} id
+   * @return {Object} Developer object
+   */
+  getDeveloper(id) {
+    const developer = this.listOfDevelopers.filter((dev) => dev.id == id);
+    return developer[0];
+  }
+}
+
+
 ;(function(scope) {
   'use strict';
   /**
