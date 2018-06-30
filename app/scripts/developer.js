@@ -19,7 +19,7 @@ class Developer { // eslint-disable-line no-unused-vars
    * Generates the template for a developer with the given data.
    * @return {String} Contains the html to render
    */
-  render() {
+  renderPanel() {
     return `<div class="card border-light mb-3">
     <div class="card-header">${this.name}</div>
     <div class="card-body">

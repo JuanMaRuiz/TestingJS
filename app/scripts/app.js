@@ -74,7 +74,7 @@
     for (const dev of listOfDevelopers.listOfDevelopers) {
       if (dev.id == devId) {
         const developer = new Developer(listOfDevelopers.getDeveloper(dev.id));
-        devPanel.innerHTML = developer.render();
+        devPanel.innerHTML = developer.renderPanel();
       }
     }
   }

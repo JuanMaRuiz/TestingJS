@@ -74,7 +74,7 @@
     for (const dev of listOfDevelopers.listOfDevelopers) {
       if (dev.id == devId) {
         const developer = new Developer(listOfDevelopers.getDeveloper(dev.id));
-        devPanel.innerHTML = developer.render();
+        devPanel.innerHTML = developer.renderPanel();
       }
     }
   }
@@ -109,7 +109,7 @@ class Developer { // eslint-disable-line no-unused-vars
    * Generates the template for a developer with the given data.
    * @return {String} Contains the html to render
    */
-  render() {
+  renderPanel() {
     return `<div class="card border-light mb-3">
     <div class="card-header">${this.name}</div>
     <div class="card-body">
@@ -148,8 +148,8 @@ class Developer { // eslint-disable-line no-unused-vars
    * @return {Object} Developer object
    */
   getDeveloper(id) {
-    const developer = this.listOfDevelopers.filter((dev) => dev.id == id);
-    return developer[0];
+    const developer = this.listOfDevelopers.filter((dev) => dev.id == id)[0];
+    return developer;
   }
 }
 
