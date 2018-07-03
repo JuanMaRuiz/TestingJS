@@ -1,7 +1,7 @@
 module.exports = {
     scripts: {
-        files: 'app/**/*.js',
-        tasks: ['eslint'],
+      files: ['app/scripts/*.js', 'app/lib/js/*.js'],
+        tasks: ['eslint', 'concat'],
         options: {
             livereload: true
         }

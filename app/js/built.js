@@ -25,7 +25,7 @@
     const developers = data.listOfDevelopers;
 
     developers.forEach(createDevItem);
-
+    console.log('Foo');
     /**
      * Creates a link element for every developer found in data.json
      * @param {*} dev - Developer data to be rendered
@@ -133,7 +133,7 @@ class Developer { // eslint-disable-line no-unused-vars
   }
 
   /**
-   * Adds a developer to the list of developers
+   * Adds a developer object to the array list of developers (listOfDevelopers)
    * @param {Object} data
    */
   setDeveloper(data) {
@@ -143,9 +143,9 @@ class Developer { // eslint-disable-line no-unused-vars
   }
 
   /**
-   * Returns a developer
-   * @param {int} id
-   * @return {Object} Developer object
+   * Given a developer id returns an object containing the data of the developer.
+   * @param {int} id of the developer
+   * @return {Object} Developer data object
    */
   getDeveloper(id) {
     const developer = this.listOfDevelopers.filter((dev) => dev.id == id)[0];
@@ -154,7 +154,8 @@ class Developer { // eslint-disable-line no-unused-vars
 }
 
 
-;(function(scope) {
+;// TODO this function should be moved to developer class
+(function(scope) {
   'use strict';
   /**
    * Define the default template for the DeveloperTemplate panel

@@ -25,7 +25,6 @@
     const developers = data.listOfDevelopers;
 
     developers.forEach(createDevItem);
-
     /**
      * Creates a link element for every developer found in data.json
      * @param {*} dev - Developer data to be rendered
