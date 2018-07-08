@@ -4,7 +4,8 @@ describe("jqLite generic Tests", function() {
     });
     describe("jqLite methods", function() {
         it('jqLite.qsa should return and array', function() {
-            expect(jqLite.qsa('div')).toEqual([]);
+          console.log(jqLite.qsa('div'));
+          expect(jqLite.qsa('div')).toEqual([]);
         });
     });
 });

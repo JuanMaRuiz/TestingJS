@@ -13,7 +13,9 @@
   },
   "globals": {
     "jqLite": true,
-    "Developer": true
+    "Developer": true,
+    "Developers": true,
+    "require": true
   },
   "rules": {
     "no-var": 1, // Use var instead of let or const. 0 -> No warning, no error; 1 -> warning, 2 -> error.

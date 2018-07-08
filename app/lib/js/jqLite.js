@@ -13,7 +13,7 @@
     jqLite = {};
 
   jqLite.thanks = function() {
-    console.log('Bazinga! Thanks for using jqLite version ' + VERSION);
+    return `Bazinga! Thanks for using jqLite version ${VERSION} 🦄`;
   };
 
   /**
@@ -66,24 +66,22 @@
   /**
    * Get Element by css selector (class or id). querySelector is widely supported from IE9.
    * @param {String} selector CSS Selector (id or class)
-   * @param {Element} scope - If no context is provided 'document' will used
+   * @param {Element} context - If no context is provided 'document' will used
    * @return {Element} DOM Element to be retrieved
    */
-  jqLite.qs = function(selector, scope) {
-    const context = scope || document;
+  jqLite.qs = function(selector, context = document) {
     return context.querySelector(selector);
   };
 
   /**
    * Get all the elements by css selector (class or id). querySelector is widely supported from IE9. As querySelectorAll
-   * returns list of nodes instead of an array of elements we need to convert to Array using Array.prototype.slice.call() method
+   * returns list of nodes instead of an array of elements we need to convert to Array (using es5 0> Array.prototype.slice.call(), using es6 Array.from)
    * @param {String} selector CSS Selector (id or class)
-   * @param {Element} scope - If no context is provided 'document' will used
+   * @param {Element} context - If no context is provided 'document' will used
    * @return {Array} of DOM Elements
    */
-  jqLite.qsa = function(selector, scope) {
-    const context = scope || document;
-    return Array.prototype.slice.call(context.querySelectorAll(selector));
+  jqLite.qsa = function(selector, context = document) {
+    return Array.from(context.querySelectorAll(selector));
   };
 
   /**

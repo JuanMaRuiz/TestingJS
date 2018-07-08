@@ -1,4 +1,5 @@
 default:
   - 'eslint'
+  - 'concat:dev'
   - 'browserSync'
   - 'watch'

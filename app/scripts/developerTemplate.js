@@ -1,3 +1,4 @@
+// TODO this function should be moved to developer class
 (function(scope) {
   'use strict';
   /**

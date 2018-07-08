@@ -16,5 +16,11 @@ module.exports = {
     cwd: 'app',
     src: 'lib/fonts/**.*',
     dest: 'dist/',
+  },
+  json: {
+    expand: true,
+    cwd: 'app',
+    src: 'data.json',
+    dest: 'dist/'
   }
 }
