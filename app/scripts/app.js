@@ -1,7 +1,7 @@
 (function(scope, jqLite) {
   'use strict';
 
-  var BazingaApp = BazingaApp || {};
+  var BazingaApp = BazingaApp || {}; // eslint-disable-line no-var
   let listOfDevelopers = [];
   const DDBB = 'data.json';
 
