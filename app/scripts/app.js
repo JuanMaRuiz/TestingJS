@@ -9,15 +9,10 @@
    * Initialize the application
    */
   BazingaApp.init = function() {
-<<<<<<< HEAD
     jqLite.ajax(DDBB, (data) => {
       listOfDevelopers = new Developers(data);
       renderListOfDevs(listOfDevelopers);
     });
-=======
-    // TODO: need to be refactored
-    getDevsInfo(renderListOfDevs);
->>>>>>> c82537803b6730f43e06aa1f8752cc857f164815
   };
 
   /**
@@ -47,9 +42,6 @@
     }
 
     // Render the default developer (first of the data object) in the DeveloperTemplate Panel
-<<<<<<< HEAD
-    renderDev(developers[0].id);
-=======
     renderDev(data[0].id);
   }
 
@@ -67,7 +59,6 @@
       }
       callback(listOfDevelopers);
     });
->>>>>>> c82537803b6730f43e06aa1f8752cc857f164815
   }
 
   /**
