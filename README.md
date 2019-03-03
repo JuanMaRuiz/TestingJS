@@ -5,13 +5,25 @@
 [![GitHub license](https://img.shields.io/github/license/JuanMaRuiz/TestingJS.svg)](https://github.com/JuanMaRuiz/TestingJS/blob/master/LICENSE)
 
 # TestingJS
-> Helping you select a Javascript Testing framework/library
+> Helping you to select a Javascript Testing framework/library
 
-This dummy application is based on the idea of [Todo MVC](http://todomvc.com/) by [Addy Osmani](https://github.com/addyosmani), [Sindre](https://github.com/sindresorhus), and a lot of [awesome developers](https://github.com/tastejs/todomvc#team).
+This dummy application is based on the idea of [Todo MVC](http://todomvc.com/) by [Addy Osmani](https://github.com/addyosmani), [Sindre](https://github.com/sindresorhus), and a lot of [awesome developers](https://github.com/tastejs/todomvc#team) but oriented to Testing libraries.
 
 These days there are a lot of Testing frameworks and libraries for testing our Javascript applications. Every framework an application has a different approach TDD vs. BDD.
 
-To try to help developers to choose the perfect Testing tool for them, we've created TestingJS. It offers a simple VanillaJS application tested with different frameworks.
+To try to help developers to choose the perfect Testing tool, we've created TestingJS. It offers a simple VanillaJS application tested with different testing frameworks/libraries.
+
+The testing libraries used in this project are oriented to web applications what means that some of the unit tests are related with DOM manipulations.
+
+## How to launch tests
+
+By default, this project is configured to launch [jasmine](http://jasmine.github.io/) tests but it is also prepared to launch a server with different Testing library. In order to see the html report in your browser you can navigate to the root of this folder and execute:
+
+```
+npm start <library> // jasmine, mocha, ...
+```
+
+Browser is reloaded whenever you change any of the tests or the html.
 
 ## License
 

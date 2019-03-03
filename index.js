@@ -7,7 +7,7 @@
 const bs = require('browser-sync').create();
 
 // Listen to change events on HTML and reload
-bs.watch("test-examples/**/*.js").on("change", bs.reload);
+bs.watch('test-examples/**/*.js').on('change', bs.reload);
 
 bs.init({
   server: {
