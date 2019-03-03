@@ -5,7 +5,7 @@
 [![GitHub license](https://img.shields.io/github/license/JuanMaRuiz/TestingJS.svg)](https://github.com/JuanMaRuiz/TestingJS/blob/master/LICENSE)
 
 # TestingJS
-> Helping you select a Javascript Testing framework/library
+> Helping you to select a Javascript Testing framework/library
 
 This dummy application is based on the idea of [Todo MVC](http://todomvc.com/) by [Addy Osmani](https://github.com/addyosmani), [Sindre](https://github.com/sindresorhus), and a lot of [awesome developers](https://github.com/tastejs/todomvc#team) but oriented to Testing libraries.
 
