@@ -46,22 +46,6 @@
   }
 
   /**
-   * @description Retrieve all the info about developers
-   * @param {Function} callback - Function to be executed when all data have been retrieved via ajax request
-   */
-  function getDevsInfo(callback) {
-    const listOfDevelopers = [];
-    jqLite.ajax('data.json', function(data) {
-      for ( const item of data ) {
-        // TODO: Developer should be imported with import statement but project needs babel to compile JS before
-        const dev = new Developer(item['_id'], item.name, item.title, item.bio, item.avatar, item.web, item.twitter, item.github);
-        listOfDevelopers.push(dev);
-      }
-      callback(listOfDevelopers);
-    });
-  }
-
-  /**
    * Attach click event handler to every element in the list of developers.
    * @param {NodeElement} elem - Element which receive the click. User can select one of the developers to show all the
    * info related with him
