@@ -2,10 +2,10 @@ module.exports = {
     options: {
         separator: ';'
     },
-    dist: {
+    dev: {
         src: [
-            'app/scripts/**/*.js'
+          'app/scripts/**/*.js'
         ],
-        dest: 'dist/built.js'
+        dest: 'app/js/built.js'
     }
 };
