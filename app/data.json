@@ -78,6 +78,17 @@
     "web": "https://igvita.com",
     "twitter": "https://twitter.com/igrigorik",
     "github": "https://github.com/igrigorik"
+  },
+  {
+    "_id": "29fe1318d583775d9c86aez7",
+    "name": "Sindre Sorhus",
+    "title": "Aspiring kitten. Fabulously quirky.",
+    "bio": "I’m a programmer and maker of things. Currently into Swift and Node.js. Aspiring rebel by heart. I created Yeoman and TodoMVC with Addy Osmani and some other friends, and I’m the creator of AVA, XO, Pageres, Chalk, and a few more node modules. I also run the Awesome project.",
+    "avatar": "images/sindre-sorhus.jpg",
+    "web": "https://sindresorhus.com",
+    "blog": "https://blog.sindresorhus.com/",
+    "twitter": "https://twitter.com/sindresorhus",
+    "github": "https://github.com/sindresorhus"
   }
 ]
 

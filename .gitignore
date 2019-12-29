@@ -4,3 +4,4 @@
 node_modules/
 documentation/
 coverage
+.nyc_output/
