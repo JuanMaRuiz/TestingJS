@@ -5,16 +5,20 @@
 [![GitHub license](https://img.shields.io/github/license/JuanMaRuiz/TestingJS.svg)](https://github.com/JuanMaRuiz/TestingJS/blob/master/LICENSE)
 
 # TestingJS
-> Helping you to select a Javascript Testing framework/library
+> Helping you to select a Javascript Testing framework/library.
 
 This dummy application is based on the idea of [Todo MVC](http://todomvc.com/) by [Addy Osmani](https://github.com/addyosmani), [Sindre](https://github.com/sindresorhus), and a lot of [awesome developers](https://github.com/tastejs/todomvc#team) but oriented to Testing libraries.
 
-These days there are a lot of Testing frameworks and libraries for testing our Javascript applications. Every framework an application has a different approach TDD vs. BDD.
+These days there are a lot of Testing frameworks and libraries for testing our Javascript applications. Every framework is focused to use TDD/BDD or both.
 
-To try to help developers to choose the perfect Testing tool, we've created TestingJS. It offers a simple VanillaJS application tested with different testing frameworks/libraries.
+To try to help developers to choose the perfect Testing tool, we've created TestingJS. As you alreday know Javascript can be used in the browser and in the backend. For that reason you will find two different and very simple projects:
 
-The testing libraries used in this project are oriented to web applications what means that some of the unit tests are related with DOM manipulations.
+* A node application (in `node` folder).- Is the typical fizzbuzz kata.
+* A front end application (in the `webapp` folder). The testing libraries used in this project are oriented to web applications what means that some of the unit tests are related with DOM manipulations.
 
+Both of these applications are tested using different testing frameworks.
+
+// TODO: Change this to cover all testing frameworks for the front and backend applications.
 ## How to launch tests
 
 By default, this project is configured to launch [jasmine](http://jasmine.github.io/) tests but it is also prepared to launch a server with different Testing library. In order to see the html report in your browser you can navigate to the root of this folder and execute:
