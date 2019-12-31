@@ -29,6 +29,12 @@ npm start <library> // jasmine, mocha, ...
 
 Browser is reloaded whenever you change any of the tests or the html.
 
+### Launching node tests
+
+**Jest test**
+
+`npm run test:jest:node` This command will launch the Jest tests for the node application.
+
 ## License
 
 > Everything in this repo is MIT License unless otherwise specified.

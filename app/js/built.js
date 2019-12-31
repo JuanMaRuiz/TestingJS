@@ -1,7 +1,7 @@
 (function(scope, jqLite) {
   'use strict';
 
-  var BazingaApp = BazingaApp || {};
+  var BazingaApp = BazingaApp || {}; // eslint-disable-line no-var
   let listOfDevelopers = [];
   const DDBB = 'data.json';
 
@@ -16,7 +16,7 @@
   };
 
   /**
-   * TODO needs to be refactored
+   * TODO: needs to be refactored
    * Render the list of developers and Render the first developer in the developer info panel.
    * @param {JSON} data - Array of objects from the ajax request
    */
@@ -42,7 +42,7 @@
     }
 
     // Render the default developer (first of the data object) in the DeveloperTemplate Panel
-    renderDev(developers[0].id);
+    renderDev(data[0].id);
   }
 
   /**

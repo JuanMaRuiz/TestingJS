@@ -11,7 +11,8 @@
     "test": "karma start test-examples/jasmine-karma/karma.conf.js",
     "generateDoc": "jsdoc -c jsdoc-config.js README-foo.md",
     "start": "node index.js",
-    "jsLint": "eslint --fix ./app/scripts/*.js"
+    "jsLint": "eslint --fix ./app/scripts/*.js",
+    "test:jest:node": "jest --config=./node/jest.config-node.js"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
