@@ -1,8 +1,10 @@
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/JuanMaRuiz/jqLite/issues)
 [![Build Status](https://travis-ci.org/JuanMaRuiz/TestingJS.svg?branch=develop)](https://travis-ci.org/JuanMaRuiz/TestingJS)
 [![Dependencies Status](https://david-dm.org/JuanMaRuiz/testingjs.svg)](https://david-dm.org/JuanMaRuiz/testingjs.svg)
 [![devDependencies Status](https://david-dm.org/JuanMaRuiz/testingjs/dev-status.svg)](https://david-dm.org/JuanMaRuiz/testingjs?type=dev)
 [![GitHub license](https://img.shields.io/github/license/JuanMaRuiz/TestingJS.svg)](https://github.com/JuanMaRuiz/TestingJS/blob/master/LICENSE)
+
+👉 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/JuanMaRuiz/jqLite/issues)
+
 
 # TestingJS
 > Helping you to select a Javascript Testing framework/library.
