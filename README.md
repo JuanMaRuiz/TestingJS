@@ -11,7 +11,7 @@
 
 This dummy application is based on the idea of [Todo MVC](http://todomvc.com/) by [Addy Osmani](https://github.com/addyosmani), [Sindre](https://github.com/sindresorhus), and a lot of [awesome developers](https://github.com/tastejs/todomvc#team) but oriented to Testing libraries.
 
-These days there are a lot of Testing frameworks and libraries for testing our Javascript applications. Every framework is focused to use TDD/BDD or both.
+These days there are a lot of Testing frameworks and libraries for testing our Javascript applications. Every framework is focused to use TDD/BDD or both, is oriented to use with nodejs applications, web applications or both,...
 
 To try to help developers to choose the perfect Testing tool, we've created TestingJS. As you alreday know Javascript can be used in the browser and in the backend. For that reason you will find two different and very simple projects:
 
