@@ -13,6 +13,14 @@ Return an empty array if `N < 1` or `N` is not int / number
 Examples:
 
 ```javascript
+N = 1 Output: [[1]]
+```
+
+```bash
+1
+```
+
+```javascript
 N = 3 Output: [[1,2,3],[8,9,4],[7,6,5]]
 ```
 
