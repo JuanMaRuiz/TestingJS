@@ -1,44 +1,46 @@
-# Fizzbuzz application
+# Spiral kata
 
-Description found in [Coding Dojo](http://codingdojo.org/kata/FizzBuzz/)
+Description found in [Coding Wars](https://www.codewars.com/kata/536a155256eb459b8700077e/train/javascript)
 
 ## Problem Description
 
-Imagine the scene. You are eleven years old, and in the five minutes before the end of the lesson, your Maths teacher decides he should make his class more “fun” by introducing a “game”. He explains that he is going to point at each pupil in turn and ask them to say the next number in sequence, starting from one. The “fun” part is that if the number is divisible by three, you instead say “Fizz” and if it is divisible by five you say “Buzz”. So now your maths teacher is pointing at all of your classmates in turn, and they happily shout “one!”, “two!”, “Fizz!”, “four!”, “Buzz!”… until he very deliberately points at you, fixing you with a steely gaze… time stands still, your mouth dries up, your palms become sweatier and sweatier until you finally manage to croak “Fizz!”. Doom is avoided, and the pointing finger moves on.
+> Classic definition: A spiral is a curve which emanates from a central point, getting progressively farther away as it revolves around the point.
 
-So of course in order to avoid embarassment infront of your whole class, you have to get the full list printed out so you know what to say. Your class has about 33 pupils and he might go round three times before the bell rings for breaktime. Next maths lesson is on Thursday. Get coding!
+Your objective is to complete a function `createSpiral(N)` that receives an integer `N` and returns an `NxN` two-dimensional array with numbers `1` through `NxN` represented as a clockwise spiral.
 
-Write a program that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz “.
+Return an empty array if `N < 1` or `N` is not int / number
 
-Sample output:
+Examples:
 
-```bash
-1
-2
-Fizz
-4
-Buzz
-Fizz
-7
-8
-Fizz
-Buzz
-11
-Fizz
-13
-14
-FizzBuzz
-16
-17
-Fizz
-19
-Buzz
-... etc up to 100
+```javascript
+N = 3 Output: [[1,2,3],[8,9,4],[7,6,5]]
 ```
 
-## Stage 2 - new requirements
+```bash
+1    2    3
+8    9    4
+7    6    5
+```
+
+```javascript
+N = 4 Output: [[1,2,3,4],[12,13,14,5],[11,16,15,6],[10,9,8,7]]
+```
 
 ```bash
- * A number is fizz if it is divisible by 3 or if it has a 3 in it
- * A number is buzz if it is divisible by 5 or if it has a 5 in it
+1   2   3   4
+12  13  14  5
+11  16  15  6
+10  9   8   7
+```
+
+```javascript
+N = 5 Output: [[1,2,3,4,5],[16,17,18,19,6],[15,24,25,20,7],[14,23,22,21,8],[13,12,11,10,9]]
+```
+
+```bash
+1   2   3   4   5
+16  17  18  19  6
+15  24  25  20  7
+14  23  22  21  8
+13  12  11  10  9
 ```
