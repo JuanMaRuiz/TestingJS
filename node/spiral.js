@@ -1,5 +1,5 @@
 const createSpiral = (n) => {
-  let output = [];
+  const output = [];
   if ( isValid(n) ) {
     output.push(Array.of(n));
   }
@@ -10,10 +10,7 @@ const createSpiral = (n) => {
 const isValid = (n) => Number.isInteger(n) && n > 0;
 
 const buildArrayOfN = (arr, n) => {
-  if ( n === 0 ) {
-    return arr;
-  }
-  return buildArrayOfN(Array.of(n).concat(n), n-1);
+  return n > 0 ? buildArrayOfN(arr.concat(n), n - 1) : arr;
 };
 
 module.exports = { createSpiral, buildArrayOfN };

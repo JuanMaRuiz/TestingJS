@@ -23,7 +23,7 @@ describe('Spiral tested with Jest Library', () => {
   //   expect(output.length).toEqual(3);
   // });
   test('should return and array of lenght 2 if 2 is passed', () => {
-    const arr = buildArrayOfN(2);
-    expect(arr.lenght).toEqual(2)
+    const arr = buildArrayOfN([], 2);
+    expect(arr.length).toEqual(2);
   });
 });
