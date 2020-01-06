@@ -15,7 +15,7 @@ describe('Spiral tested with Jest Library', () => {
     expect(createSpiral(-1)).toEqual([]);
   });
   test('it should return [[1]] for n = 1', () => {
-    expect(createSpiral(1)).toEqual([['1']]);
+    expect(createSpiral(1)).toEqual([[1]]);
   });
   // TODO: Fix this test
   // test('it should return an array of length N', () => {

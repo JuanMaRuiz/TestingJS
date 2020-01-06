@@ -1,19 +1,12 @@
 const createSpiral = (n) => {
-  let output;
-  if ( !Number.isInteger(n) || n < 1 ) {
-    output = [];
-  } else {
-    let tempArr = [];
-    for ( let i = 1; i <= n*n; i++ ) {
-      console.log(`i: ${i}`);
-      tempArr.push(Array.from(i.toString()));
-      console.log(`tempArr => ${tempArr}`);
-    }
-    output = tempArr;
+  let output = [];
+  if ( isValid(n) ) {
+    output.push(Array.of(n));
   }
 
-  console.log(`output => ${output}`);
   return output;
 };
+
+const isValid = (n) => Number.isInteger(n) && n > 0;
 
 module.exports = { createSpiral };
