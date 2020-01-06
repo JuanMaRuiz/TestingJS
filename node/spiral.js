@@ -9,4 +9,11 @@ const createSpiral = (n) => {
 
 const isValid = (n) => Number.isInteger(n) && n > 0;
 
-module.exports = { createSpiral };
+const buildArrayOfN = (arr, n) => {
+  if ( n === 0 ) {
+    return arr;
+  }
+  return buildArrayOfN(Array.of(n).concat(n), n-1);
+};
+
+module.exports = { createSpiral, buildArrayOfN };
