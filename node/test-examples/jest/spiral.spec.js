@@ -22,8 +22,8 @@ describe('Spiral tested with Jest Library', () => {
     expect(output[0].length).toEqual(3);
   });
   // TODO: Remove this test once createSpiral do its job 😅
-  // test('it should return and array of lenght 2 if 2 is passed', () => {
-  //   const arr = buildArrayOfN([], 2);
-  //   expect(arr.length).toEqual(2);
-  // });
+  test('it should return an array with length equal to (last item - first item + 1) ', () => {
+    const arr = buildArrayOfN([], 1, 3);
+    expect(arr.length).toEqual(3);
+  });
 });
