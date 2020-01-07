@@ -1,7 +1,7 @@
 const createSpiral = (n) => {
   const output = [];
   if ( isValid(n) ) {
-    output.push(Array.of(n));
+    return Array.of(buildArrayOfN([], n));
   }
 
   return output;

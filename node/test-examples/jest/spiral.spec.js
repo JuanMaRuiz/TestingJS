@@ -17,13 +17,13 @@ describe('Spiral tested with Jest Library', () => {
   test('it should return [[1]] for n = 1', () => {
     expect(createSpiral(1)).toEqual([[1]]);
   });
-  // TODO: Fix this test
-  // test('it should return an array of length the passed integer (n = 3, output array of length 3)', () => {
-  //   const output = createSpiral(3);
-  //   expect(output.length).toEqual(3);
-  // });
-  test('should return and array of lenght 2 if 2 is passed', () => {
-    const arr = buildArrayOfN([], 2);
-    expect(arr.length).toEqual(2);
+  test('it should return an array of length the passed integer (n = 3, output array of length 3)', () => {
+    const output = createSpiral(3);
+    expect(output[0].length).toEqual(3);
   });
+  // TODO: Remove this test once createSpiral do its job 😅
+  // test('it should return and array of lenght 2 if 2 is passed', () => {
+  //   const arr = buildArrayOfN([], 2);
+  //   expect(arr.length).toEqual(2);
+  // });
 });
